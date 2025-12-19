@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics | LuxeMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="header" class="border-bottom sticky-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Luxe<span>Market</span>.</a>
+            
+            <div class="search-bar hidden-mobile">
+                <input type="text" placeholder="Search for electronics..." aria-label="Search">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html" class="active-link">Shop</a>
+                <a href="categories.html">Categories</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-icons">
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i><span class="badge">3</span></a>
+                <a href="login.html"><i class="far fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="category-hero electronics-hero">
+        <div class="hero-content">
+            <h1>Explore the Latest Electronics</h1>
+            <p>Top deals on gadgets, devices, and accessories.</p>
+            <a href="#product-grid" class="btn btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <div class="container breadcrumb-nav">
+        <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i>
+        <a href="shop.html">Shop</a> <i class="fas fa-chevron-right"></i>
+        <span>Electronics</span>
+    </div>
+
+    <section class="container featured-deals-section">
+        <div class="section-header">
+            <h2><i class="fas fa-bolt text-warning"></i> Flash Deals</h2>
+            <div class="countdown-timer" id="countdown">
+                <div class="time-box"><span id="hours">08</span><small>Hrs</small></div>:
+                <div class="time-box"><span id="minutes">45</span><small>Mins</small></div>:
+                <div class="time-box"><span id="seconds">30</span><small>Secs</small></div>
+            </div>
+        </div>
+        
+        <div class="deals-grid">
+            <div class="deal-card">
+                <span class="badge-discount">-40%</span>
+                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=400&q=80" alt="Smart Watch">
+                <div class="deal-info">
+                    <h3>Apple Watch Series 7</h3>
+                    <div class="price"><span class="old">$399</span> $239</div>
+                    <div class="stock-bar"><div class="fill" style="width: 80%"></div></div>
+                    <small>Only 4 left in stock</small>
+                </div>
+            </div>
+            <div class="deal-card">
+                <span class="badge-discount">-25%</span>
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80" alt="Headphones">
+                <div class="deal-info">
+                    <h3>Sony WH-1000XM4</h3>
+                    <div class="price"><span class="old">$348</span> $261</div>
+                    <div class="stock-bar"><div class="fill" style="width: 40%"></div></div>
+                    <small>Selling fast</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container main-layout">
+        
+        <button class="mobile-filter-btn" id="filterToggle">
+            <i class="fas fa-filter"></i> Filter & Sort
+        </button>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Filters</h3>
+                <button id="closeSidebar"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="filter-group">
+                <h4>Category</h4>
+                <ul>
+                    <li><label class="checkbox"><input type="checkbox"> Laptops <span>(45)</span></label></li>
+                    <li><label class="checkbox"><input type="checkbox"> Smartphones <span>(32)</span></label></li>
+                    <li><label class="checkbox"><input type="checkbox"> Audio <span>(18)</span></label></li>
+                    <li><label class="checkbox"><input type="checkbox"> Cameras <span>(12)</span></label></li>
+                    <li><label class="checkbox"><input type="checkbox"> Accessories <span>(60)</span></label></li>
+                </ul>
+            </div>
+
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <div class="price-slider-container">
+                    <input type="range" min="0" max="2000" value="1000" class="slider" id="priceRange">
+                    <div class="range-values">
+                        <span>$0</span>
+                        <span id="priceOutput">$1000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h4>Brand</h4>
+                <label class="checkbox"><input type="checkbox"> Apple</label>
+                <label class="checkbox"><input type="checkbox"> Samsung</label>
+                <label class="checkbox"><input type="checkbox"> Sony</label>
+                <label class="checkbox"><input type="checkbox"> Dell</label>
+                <label class="checkbox"><input type="checkbox"> Canon</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Rating</h4>
+                <label class="checkbox"><input type="checkbox"> <i class="fas fa-star text-warning"></i> 4 & Up</label>
+                <label class="checkbox"><input type="checkbox"> <i class="fas fa-star text-warning"></i> 3 & Up</label>
+            </div>
+
+            <button class="btn-clear-filters">Clear All</button>
+        </aside>
+
+        <main class="products-area" id="product-grid">
+            
+            <div class="toolbar">
+                <p class="result-count">Showing 1–8 of 120 results</p>
+                <div class="sort-wrapper">
+                    <select class="sort-select">
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge-new">New</span>
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80" alt="Macbook">
+                        <div class="overlay-actions">
+                            <button title="Quick View"><i class="far fa-eye"></i></button>
+                            <button title="Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <h3>MacBook Pro M2</h3>
+                        <div class="price">$1,299.00</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                 <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1588872657578-838c6470f9af?auto=format&fit=crop&w=500&q=80" alt="Speaker">
+                        <div class="overlay-actions">
+                            <button title="Quick View"><i class="far fa-eye"></i></button>
+                            <button title="Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <h3>Bluetooth Speaker</h3>
+                        <div class="price">$89.99</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                 <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1592899677977-9c10ca63602d?auto=format&fit=crop&w=500&q=80" alt="Phone">
+                        <div class="overlay-actions">
+                            <button title="Quick View"><i class="far fa-eye"></i></button>
+                            <button title="Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                        <h3>Samsung Galaxy S22</h3>
+                        <div class="price">$799.00</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                 <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge-discount">-10%</span>
+                        <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=500&q=80" alt="Keyboard">
+                        <div class="overlay-actions">
+                            <button title="Quick View"><i class="far fa-eye"></i></button>
+                            <button title="Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                        <h3>Mechanical Keyboard</h3>
+                        <div class="price"><span class="old">$150</span> $135</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promo-banner-mid">
+                <div class="promo-content">
+                    <h3>Holiday Tech Sale</h3>
+                    <p>Up to 40% Off on Gaming Laptops & Accessories</p>
+                    <a href="#" class="btn btn-outline-light">View Offers</a>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=500&q=80" alt="Mouse">
+                        <div class="overlay-actions">
+                            <button title="Quick View"><i class="far fa-eye"></i></button>
+                            <button title="Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <h3>Wireless Gaming Mouse</h3>
+                        <div class="price">$59.99</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1526045431048-f857369baa09?auto=format&fit=crop&w=500&q=80" alt="Watch">
+                        <div class="overlay-actions">
+                            <button title="Quick View"><i class="far fa-eye"></i></button>
+                            <button title="Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+                        <h3>Fitness Tracker</h3>
+                        <div class="price">$49.00</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1511385348-a52b4a160dc2?auto=format&fit=crop&w=500&q=80" alt="Camera">
+                        <div class="overlay-actions">
+                            <button title="Quick View"><i class="far fa-eye"></i></button>
+                            <button title="Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <h3>DSLR Camera Kit</h3>
+                        <div class="price">$650.00</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge-new">New</span>
+                        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=500&q=80" alt="TV">
+                        <div class="overlay-actions">
+                            <button title="Quick View"><i class="far fa-eye"></i></button>
+                            <button title="Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                        <h3>55" 4K Smart TV</h3>
+                        <div class="price">$499.00</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="disabled"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </main>
+    </div>
+
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>Stay Plugged In</h2>
+            <p>Subscribe for exclusive tech deals, new launches, and gadget reviews.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Luxe<span>Market</span>.</h3>
+                <p>Premium Electronics & Gadgets.</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <a href="#">Laptops</a>
+                <a href="#">Phones</a>
+                <a href="#">Cameras</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+                <a href="#">Returns Policy</a>
+            </div>
+            <div class="footer-col">
+                <h4>Secure Payment</h4>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 LuxeMarket. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Wireless Headphones | LuxeMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Luxe<span>Market</span>.</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." aria-label="Search">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="#categories">Categories</a>
+                <a href="#deals" class="highlight">Deals</a>
+            </nav>
+            <div class="header-icons">
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-bag"></i><span class="badge">2</span></a>
+                <a href="#"><i class="far fa-user"></i></a>
+                <button class="mobile-toggle" id="mobile-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container breadcrumbs">
+        <a href="index.html">Home</a> &gt; <a href="shop.html">Shop</a> &gt; <a href="#">Electronics</a> &gt; <span>Wireless Headphones</span>
+    </div>
+
+    <section class="container product-details">
+        
+        <div class="product-gallery">
+            <div class="main-image-container" id="zoom-container">
+                <img id="mainImg" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Main Product">
+            </div>
+            
+            <div class="thumbnail-row">
+                <img class="thumb active" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=150&q=80" onclick="changeImage(this)">
+                <img class="thumb" src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=150&q=80" onclick="changeImage(this)">
+                <img class="thumb" src="https://images.unsplash.com/photo-1524678606372-987b780f65f4?auto=format&fit=crop&w=150&q=80" onclick="changeImage(this)">
+                <div class="thumb video-thumb" onclick="alert('Video Modal Logic Here')">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-info-col">
+            <h1 class="product-title">Premium Noise-Cancelling Headphones</h1>
+            
+            <div class="product-meta">
+                <div class="rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span>(128 Reviews)</span>
+                </div>
+                <div class="meta-separator">|</div>
+                <span class="stock-status in-stock">In Stock</span>
+                <div class="meta-separator">|</div>
+                <span class="sku">SKU: WH-1000XM5</span>
+            </div>
+
+            <div class="price-box">
+                <span class="current-price">$249.00</span>
+                <span class="original-price">$299.00</span>
+                <span class="discount-tag">-17%</span>
+            </div>
+
+            <div class="promo-box">
+                <p><i class="fas fa-truck"></i> <strong>Free Shipping</strong> on orders over $50</p>
+                <div class="countdown-timer">
+                    <span>Flash Sale Ends In:</span>
+                    <div id="timer">05h 43m 12s</div>
+                </div>
+            </div>
+
+            <p class="short-desc">Experience crystal clear sound with our latest noise-cancelling technology. Lightweight design, 30-hour battery life, and ultra-soft ear cushions.</p>
+
+            <div class="product-options">
+                <div class="option-group">
+                    <label>Color: <span id="colorName">Black</span></label>
+                    <div class="color-options">
+                        <button class="color-btn selected" style="background-color: #111;" data-color="Black"></button>
+                        <button class="color-btn" style="background-color: #C0C0C0;" data-color="Silver"></button>
+                        <button class="color-btn" style="background-color: #1e1b4b;" data-color="Midnight Blue"></button>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <label>Quantity</label>
+                    <div class="quantity-selector">
+                        <button onclick="updateQty(-1)">-</button>
+                        <input type="number" id="qtyInput" value="1" min="1" readonly>
+                        <button onclick="updateQty(1)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-primary btn-large"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                <button class="btn btn-buy-now btn-large">Buy Now</button>
+                <button class="wishlist-action"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container product-tabs-section">
+        <div class="tabs-header">
+            <button class="tab-btn active" onclick="openTab(event, 'desc')">Description</button>
+            <button class="tab-btn" onclick="openTab(event, 'specs')">Specifications</button>
+            <button class="tab-btn" onclick="openTab(event, 'shipping')">Shipping & Returns</button>
+        </div>
+
+        <div id="desc" class="tab-content active">
+            <h3>Immersive Sound Experience</h3>
+            <p>Immerse yourself in music without distractions. These headphones feature industry-leading noise cancellation, evolved to help you focus on what matters.</p>
+            <ul>
+                <li>Active Noise Cancelling (ANC) technology</li>
+                <li>Bluetooth 5.0 connectivity with 30ft range</li>
+                <li>Built-in microphone for clear calls</li>
+            </ul>
+        </div>
+
+        <div id="specs" class="tab-content">
+            <table class="specs-table">
+                <tr><td>Bluetooth Version</td><td>5.2</td></tr>
+                <tr><td>Battery Life</td><td>Up to 30 hours</td></tr>
+                <tr><td>Weight</td><td>250g</td></tr>
+                <tr><td>Driver Size</td><td>40mm Dome</td></tr>
+                <tr><td>Warranty</td><td>2 Years</td></tr>
+            </table>
+        </div>
+
+        <div id="shipping" class="tab-content">
+             <p><strong>Free Standard Shipping:</strong> 3-5 Business Days.</p>
+             <p><strong>Express Shipping:</strong> 1-2 Business Days ($15.00).</p>
+             <p><strong>Returns:</strong> You have 30 days to return this item if it is unused and in original packaging.</p>
+        </div>
+    </section>
+
+    <section class="container reviews-section">
+        <div class="reviews-toolbar">
+            <h3>Customer Reviews (128)</h3>
+            <div class="review-actions">
+                <select class="review-filter">
+                    <option value="newest">Most Recent</option>
+                    <option value="highest">Highest Rating</option>
+                    <option value="lowest">Lowest Rating</option>
+                </select>
+                <button class="btn btn-secondary btn-sm">Write a Review</button>
+            </div>
+        </div>
+        
+        <div class="review-list">
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <strong>John D.</strong>
+                        <span class="review-date">2 days ago</span>
+                    </div>
+                    <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+                <p>"Absolutely amazing sound quality. The noise cancelling is perfect for my commute. Highly recommended!"</p>
+            </div>
+            </div>
+    </section>
+
+    <section class="container section">
+        <h2 class="section-title">You Might Also Like</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=400&q=80" alt="Related">
+                </div>
+                <div class="product-info">
+                    <h3>Pro Earbuds</h3>
+                    <span class="price">$149.00</span>
+                    <button class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1524678606372-987b780f65f4?auto=format&fit=crop&w=400&q=80" alt="Related">
+                </div>
+                <div class="product-info">
+                    <h3>Headphone Stand</h3>
+                    <span class="price">$35.00</span>
+                    <button class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+             <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80" alt="Related">
+                </div>
+                <div class="product-info">
+                    <h3>Smart Watch</h3>
+                    <span class="price">$199.00</span>
+                    <button class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-bottom">
+            <p>&copy; 2023 LuxeMarket. All Rights Reserved.</p>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i> <i class="fab fa-cc-paypal"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

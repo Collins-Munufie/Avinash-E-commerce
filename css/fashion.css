@@ -1,0 +1,116 @@
+/* =========================
+   FASHION PAGE STYLES
+   ========================= */
+
+/* Font additions for Fashion feel */
+.serif-font { font-family: 'Playfair Display', serif; }
+
+/* 2. Hero Section */
+.fashion-hero {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 6rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.fashion-hero h1 { font-size: 3.5rem; margin-bottom: 0.5rem; letter-spacing: 1px; }
+.btn-white { background: white; color: black; padding: 12px 30px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 1.5rem; transition: 0.3s; }
+.btn-white:hover { background: #f3f4f6; transform: translateY(-2px); }
+
+/* Sidebar: Size Grid */
+.size-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.size-box { 
+    border: 1px solid #d1d5db; background: white; padding: 8px; 
+    cursor: pointer; transition: 0.2s; font-size: 0.9rem;
+}
+.size-box:hover { border-color: #111; }
+.size-box.selected { background: #111; color: white; border-color: #111; }
+
+/* Sidebar: Color Swatches */
+.color-swatches { display: flex; flex-wrap: wrap; gap: 10px; }
+.swatch { 
+    width: 30px; height: 30px; border-radius: 50%; border: none; 
+    cursor: pointer; transition: transform 0.2s; position: relative;
+}
+.swatch:hover { transform: scale(1.1); }
+.swatch.selected::after {
+    content: ''; position: absolute; top: -4px; left: -4px; right: -4px; bottom: -4px;
+    border: 2px solid #111; border-radius: 50%;
+}
+
+/* 5. Fashion Product Card (Advanced Hover) */
+.fashion-card .product-image {
+    position: relative;
+    overflow: hidden;
+    background: #f9fafb;
+    height: 350px; /* Taller for fashion images */
+}
+
+.fashion-card img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Logic for swapping images */
+.fashion-card .img-back {
+    position: absolute; top: 0; left: 0; opacity: 0;
+}
+.fashion-card:hover .img-front { opacity: 0; }
+.fashion-card:hover .img-back { opacity: 1; transform: scale(1.05); }
+
+/* Add to Cart Bar (Slides up on hover) */
+.add-to-cart-bar {
+    position: absolute; bottom: 0; left: 0; width: 100%;
+    background: rgba(0,0,0,0.8); color: white; border: none;
+    padding: 12px; font-weight: 600; cursor: pointer;
+    transform: translateY(100%); transition: transform 0.3s ease;
+}
+.fashion-card:hover .add-to-cart-bar { transform: translateY(0); }
+
+.color-dots { display: flex; gap: 5px; margin-top: 5px; }
+.color-dots span { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+
+/* 7. Horizontal Promo Banner */
+.promo-banner-fashion {
+    grid-column: 1 / -1; /* Span full width of grid */
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3rem 0;
+    overflow: hidden;
+}
+.promo-banner-fashion .content { padding: 3rem; flex: 1; }
+.promo-banner-fashion h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 0.5rem; }
+.promo-banner-fashion img { width: 50%; height: 300px; object-fit: cover; }
+.btn-black { background: #111; color: white; padding: 10px 25px; text-decoration: none; display: inline-block; margin-top: 15px; }
+
+/* 8. Featured Looks (Masonry-ish) */
+.featured-looks-section { margin: 4rem auto; }
+.featured-looks-section h2 { margin-bottom: 2rem; font-size: 2.2rem; }
+.looks-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 20px;
+    height: 500px; /* Fixed height for masonry feel */
+}
+.look-card { position: relative; overflow: hidden; height: 100%; }
+.look-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.look-card:hover img { transform: scale(1.05); }
+
+.look-overlay {
+    position: absolute; bottom: 0; left: 0; width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white; padding: 20px;
+    transform: translateY(10px); transition: 0.3s;
+}
+.look-card:hover .look-overlay { transform: translateY(0); }
+.look-overlay a { color: white; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; border-bottom: 1px solid white; text-decoration: none; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .looks-grid { grid-template-columns: 1fr; height: auto; }
+    .look-card { height: 300px; }
+    .promo-banner-fashion { flex-direction: column; text-align: center; }
+    .promo-banner-fashion img { width: 100%; height: 200px; }
+}
