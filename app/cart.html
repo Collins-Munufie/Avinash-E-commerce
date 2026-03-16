@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | LuxeMarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <header id="header" class="border-bottom">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Luxe<span>Market</span>.</a>
+            <div class="header-icons">
+                <a href="shop.html" class="text-link">Continue Shopping</a>
+                <a href="#"><i class="fas fa-lock"></i> Secure</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="container cart-section">
+        <h1 class="page-title">Shopping Cart (2)</h1>
+
+        <div class="cart-layout">
+            <div class="cart-items-container">
+                <div class="cart-header">
+                    <span>Product</span>
+                    <span>Quantity</span>
+                    <span>Total</span>
+                </div>
+
+                <div class="cart-item" id="item-1">
+                    <div class="item-info">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=150&q=80" alt="Headphones">
+                        <div>
+                            <h4>Wireless Headphones</h4>
+                            <p class="text-muted">Color: Black</p>
+                            <button class="remove-btn" onclick="removeItem('item-1')"><i class="fas fa-trash"></i> Remove</button>
+                        </div>
+                    </div>
+                    <div class="item-qty">
+                        <div class="quantity-selector">
+                            <button onclick="updateCartQty('price-1', -1)">-</button>
+                            <input type="number" value="1" readonly>
+                            <button onclick="updateCartQty('price-1', 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="item-price" id="price-1" data-base-price="249.00">$249.00</div>
+                </div>
+
+                <div class="cart-item" id="item-2">
+                    <div class="item-info">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=150&q=80" alt="Watch">
+                        <div>
+                            <h4>Smart Watch</h4>
+                            <p class="text-muted">Color: Silver</p>
+                            <button class="remove-btn" onclick="removeItem('item-2')"><i class="fas fa-trash"></i> Remove</button>
+                        </div>
+                    </div>
+                    <div class="item-qty">
+                        <div class="quantity-selector">
+                            <button onclick="updateCartQty('price-2', -1)">-</button>
+                            <input type="number" value="1" readonly>
+                            <button onclick="updateCartQty('price-2', 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="item-price" id="price-2" data-base-price="199.00">$199.00</div>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">$448.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (5%)</span>
+                    <span id="cart-tax">$22.40</span>
+                </div>
+                
+                <div class="coupon-box">
+                    <input type="text" placeholder="Discount Code">
+                    <button>Apply</button>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="cart-total">$470.40</span>
+                </div>
+
+                <a href="checkout.html" class="btn btn-primary btn-block">Proceed to Checkout</a>
+                
+                <div class="trust-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <p><i class="fas fa-shield-alt"></i> Secure Checkout</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Clothing - Modern Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/category.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">LUXE<span>SHOP</span></a>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="nav-icons">
+                <a href="#"><i class="far fa-user"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge">2</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="category-hero">
+        <div class="container">
+            <h1>Men's Clothing</h1>
+            <p>Discover the latest trends in men's fashion. Comfort meets style.</p>
+        </div>
+    </header>
+
+    <div class="container main-layout">
+        
+        <button class="mobile-filter-btn" id="filterToggle">
+            <i class="fas fa-sliders-h"></i> Filters
+        </button>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Filters</h3>
+                <button id="closeSidebar"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="filter-group">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#">T-Shirts <span>(12)</span></a></li>
+                    <li><a href="#">Jackets <span>(5)</span></a></li>
+                    <li><a href="#">Jeans <span>(8)</span></a></li>
+                    <li><a href="#">Activewear <span>(15)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <div class="price-slider">
+                    <input type="range" min="0" max="500" value="150" class="slider" id="priceRange">
+                    <div class="price-value">Max Price: $<span id="priceOutput">150</span></div>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h4>Brand</h4>
+                <label class="checkbox"><input type="checkbox"> Nike</label>
+                <label class="checkbox"><input type="checkbox"> Adidas</label>
+                <label class="checkbox"><input type="checkbox"> Levi's</label>
+                <label class="checkbox"><input type="checkbox"> H&M</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Rating</h4>
+                <label class="checkbox"><input type="checkbox"> <i class="fas fa-star text-warning"></i> 4 Stars & Up</label>
+                <label class="checkbox"><input type="checkbox"> <i class="fas fa-star text-warning"></i> 3 Stars & Up</label>
+            </div>
+        </aside>
+
+        <main class="products-area">
+            
+            <div class="toolbar">
+                <p class="result-count">Showing 1–9 of 40 results</p>
+                <select class="sort-select">
+                    <option>Sort by: Popularity</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Newest Arrivals</option>
+                </select>
+            </div>
+
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge-discount">-20%</span>
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80" alt="T-Shirt">
+                        <div class="overlay-actions">
+                            <button title="Quick View"><i class="far fa-eye"></i></button>
+                            <button title="Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>Classic White Tee</h3>
+                        <div class="price">
+                            <span class="old-price">$25.00</span>
+                            <span class="new-price">$20.00</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=500&q=80" alt="Jacket">
+                        <div class="overlay-actions">
+                            <button title="Quick View"><i class="far fa-eye"></i></button>
+                            <button title="Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <h3>Denim Bomber Jacket</h3>
+                        <div class="price">
+                            <span class="new-price">$89.99</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                 <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1617137968427-85924c809a10?auto=format&fit=crop&w=500&q=80" alt="Jeans">
+                        <div class="overlay-actions">
+                            <button title="Quick View"><i class="far fa-eye"></i></button>
+                            <button title="Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h3>Slim Fit Jeans</h3>
+                        <div class="price">
+                            <span class="new-price">$55.00</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge-new">New</span>
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=500&q=80" alt="Hoodie">
+                        <div class="overlay-actions">
+                            <button title="Quick View"><i class="far fa-eye"></i></button>
+                            <button title="Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <h3>Urban Fleece Hoodie</h3>
+                        <div class="price">
+                            <span class="new-price">$45.00</span>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                </div>
+
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#"><i class="fas fa-chevron-right"></i></a>
+            </div>
+
+        </main>
+    </div>
+
+    <section class="trust-section">
+        <div class="container trust-grid">
+            <div class="trust-item">
+                <i class="fas fa-shipping-fast"></i>
+                <div>
+                    <h4>Free Shipping</h4>
+                    <p>On all orders over $75</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                    <h4>Secure Payment</h4>
+                    <p>100% secure payment</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-undo"></i>
+                <div>
+                    <h4>Easy Returns</h4>
+                    <p>30 day money back guarantee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>LUXE<span>SHOP</span></h3>
+                <p>Your destination for modern fashion.</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">Contact</a>
+                <a href="#">FAQ</a>
+                <a href="#">Returns</a>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <form>
+                    <input type="email" placeholder="Your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 LuxeShop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
