@@ -1,122 +1,93 @@
 # AvinashMarket E-Commerce 🛒
 
-![Project Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
 ![Frontend](https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JS-blue?style=flat-square)
-![Infrastructure](https://img.shields.io/badge/Infrastructure-Terraform%20%7C%20AWS-orange?style=flat-square)
+![Cloud](https://img.shields.io/badge/Cloud-AWS%20%7C%20Terraform-orange?style=flat-square)
 
-AvinashMarket is a modern, responsive e-commerce web application featuring a clean user interface, product catalog, categories, shopping cart, and checkout simulation. The project includes Infrastructure as Code (IaC) using Terraform for seamless AWS deployment and a Dockerized environment setup.
-
----
-
-## 🌟 Key Features
-
-- **Responsive Design**: Fully mobile-friendly navigation and layout.
-- **Dynamic User Interface**: Sticky headers, smooth scrolling, product image zoom effects, and interactive tabs.
-- **Shopping Cart**: Client-side cart logic with dynamic quantity updates, tax calculations, and total price adjustments.
-- **Product Categories**: Dedicated pages for Electronics, Fashion, Home & Kitchen, etc.
-- **Automated Deployment**: Terraform scripts to automatically provision AWS EC2 infrastructure.
-- **Cloud-Ready Environment**: Included `userdata.sh` automatically installs Docker, Docker Compose, Nginx, and Git on the EC2 instance upon launch.
+AvinashMarket is a responsive e-commerce website built with HTML, CSS, and JavaScript. It includes product pages, shopping cart functionality, checkout pages, and AWS deployment using Terraform.
 
 ---
 
-## 🛠️ Technology Stack
+## Features
 
-- **Frontend**: HTML5, CSS3, Vanilla JavaScript (ES6+), FontAwesome Icons, Google Fonts (Inter)
-- **Infrastructure (IaC)**: Terraform (AWS EC2, Security Groups, Elastic IPs)
-- **Containerization**: Docker
-- **Web Server**: Nginx (provisioned via AWS EC2 user data)
+* Responsive design for desktop and mobile
+* Product listing and category pages
+* Shopping cart with quantity updates
+* Checkout pages
+* Smooth UI interactions
+* Docker support
+* AWS EC2 deployment with Terraform
 
 ---
 
-## 📂 Project Structure
+## Tech Stack
+
+* HTML5
+* CSS3
+* JavaScript
+* Docker
+* Terraform
+* AWS EC2
+* Nginx
+
+---
+
+## Project Structure
 
 ```text
 Avinash-E-commerce/
-├── app/                  # Frontend assets (HTML pages, CSS stylesheets, images)
-│   ├── css/              # Stylesheets
-│   ├── images/           # Product and UI images
-│   ├── index.html        # Main landing page
-│   ├── Products.html     # Product listing page
-│   ├── cart.html         # Shopping cart page
-│   └── ...               # Other HTML pages (checkout, categories, login, etc.)
-├── terraform/            # Infrastructure as Code (IaC) files
-│   ├── main.tf           # Main Terraform configuration (EC2, SG, EIP)
-│   ├── variables.tf      # Terraform variables definition
-│   ├── provider.tf       # AWS provider configuration
-│   └── output.tf         # Terraform outputs
-├── Dockerfile            # Docker configuration for containerizing the application
-├── script.js             # Core frontend JavaScript logic
-└── userdata.sh           # Bash script for initializing the AWS EC2 instance
+├── app/
+│   ├── css/
+│   ├── images/
+│   ├── index.html
+│   ├── Products.html
+│   ├── cart.html
+│   └── ...
+├── terraform/
+│   ├── main.tf
+│   ├── provider.tf
+│   ├── variables.tf
+│   └── output.tf
+├── Dockerfile
+├── script.js
+└── userdata.sh
 ```
 
 ---
 
-## 🚀 Getting Started
+## Run Locally
 
-### Local Development (Frontend Only)
+```bash
+git clone https://github.com/Collins-Munufie/Avinash-E-commerce.git
+cd Avinash-E-commerce
+```
 
-Since the frontend is built with vanilla web technologies, you can easily run it without any backend dependencies.
-
-1. Clone the repository to your local machine.
-2. Navigate to the `app/` directory.
-3. Open `index.html` directly in your favorite web browser, or use a local development server (e.g., Live Server in VS Code) for a better experience.
-
-*(Note: `script.js` is located in the root directory. Ensure that your HTML files correctly reference it, e.g., `<script src="../script.js"></script>` or place it in the appropriate directory if modifying).*
-
-### Docker Environment
-
-If you prefer to run the application within a Docker container (Node.js environment):
-
-1. Ensure you have a valid `package.json` file in the root directory with a defined `start` script.
-2. Build the Docker image:
-   ```bash
-   docker build -t avinash-market .
-   ```
-3. Run the container:
-   ```bash
-   docker run -p 3000:3000 avinash-market
-   ```
-4. Access the application at `http://localhost:3000`.
+Open `app/index.html` in your browser.
 
 ---
 
-## ☁️ Infrastructure Deployment (AWS)
+## Run with Docker
 
-This project uses Terraform to provision an AWS EC2 instance (Ubuntu 22.04), configure Security Groups (allowing HTTP, HTTPS, and SSH), and assign an Elastic IP.
-
-### Prerequisites
-- [Terraform](https://developer.hashicorp.com/terraform/downloads) installed locally.
-- AWS CLI installed and configured with appropriate IAM credentials.
-- An existing SSH Key Pair in AWS for EC2 access.
-
-### Deployment Steps
-
-1. Navigate to the Terraform directory:
-   ```bash
-   cd terraform
-   ```
-2. Initialize Terraform to download the necessary AWS provider plugins:
-   ```bash
-   terraform init
-   ```
-3. Review the deployment plan:
-   ```bash
-   terraform plan
-   ```
-4. Apply the configuration to provision resources:
-   ```bash
-   terraform apply
-   ```
-   *(Type `yes` when prompted to confirm).*
-
-5. Once deployed, the EC2 instance will automatically execute `userdata.sh` on boot to install Docker, Nginx, and Git, making it ready to serve your application.
+```bash
+docker build -t avinashmarket .
+docker run -p 3000:3000 avinashmarket
+```
 
 ---
 
-## 🤝 Contributing
+## Deploy to AWS
 
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+```bash
+cd terraform
+terraform init
+terraform plan
+terraform apply
+```
 
-## 📄 License
+This provisions an EC2 instance and runs the setup script automatically.
 
-This project is licensed under the MIT License.
+---
+
+## Author
+
+Collins Munufie
