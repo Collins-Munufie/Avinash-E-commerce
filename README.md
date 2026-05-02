@@ -4,7 +4,7 @@
 ![Frontend](https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JS-blue?style=flat-square)
 ![Cloud](https://img.shields.io/badge/Cloud-AWS%20%7C%20Terraform-orange?style=flat-square)
 
-AvinashMarket is a responsive e-commerce website built with HTML, CSS, and JavaScript. It includes product pages, shopping cart functionality, checkout pages, and AWS deployment using Terraform.
+Responsive e-commerce web application built with HTML, CSS, JavaScript, Docker, Terraform, and AWS EC2 deployment.
 
 ---
 
