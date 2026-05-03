@@ -1,6 +1,12 @@
-# AvinashMarket - Premium E-Commerce Store
+# AvinashMarket E-Commerce 🛒
 
-A modern, production-ready e-commerce website built with clean HTML, CSS, and JavaScript. Features a professional UI/UX, responsive design, smooth animations, and full shopping cart functionality.
+![Status](https://img.shields.io/badge/Status-Active-success?style=flat-square)
+![Frontend](https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JS-blue?style=flat-square)
+![Cloud](https://img.shields.io/badge/Cloud-AWS%20%7C%20Terraform-orange?style=flat-square)
+
+AvinashMarket is a responsive e-commerce website built with HTML, CSS, and JavaScript. It includes product pages, shopping cart functionality, checkout pages, and AWS deployment using Terraform.
+
+---
 
 ## Features
 
