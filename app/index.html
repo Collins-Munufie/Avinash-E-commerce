@@ -3,297 +3,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AvinashMarket | Modern E-Commerce</title>
+    <meta name="description" content="AvinashMarket - Your premium online store for electronics, fashion, home & living. Shop the best brands with free shipping and easy returns.">
+    <meta name="keywords" content="online shopping, electronics, fashion, home decor, premium products, free shipping">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="AvinashMarket - Premium Online Shopping">
+    <meta property="og:description" content="Shop the latest in electronics, fashion, and home & living. Quality products, fast delivery.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://avinashmarket.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>AvinashMarket | Premium Online Shopping - Electronics, Fashion & More</title>
+    <link rel="icon" type="image/jpeg" href="images/avinash_logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
-   <link rel="icon" type="image/png" href="images/avinash_logo.jpg">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
 
-    <header id="header">
-        <div class="container header-container">
-            <a href="#" class="logo">Avinash<span>Market</span>.</a>
-
-            <div class="search-bar">
-                <input type="text" placeholder="Search for products..." aria-label="Search">
-                <button type="button" aria-label="Submit Search"><i class="fas fa-search"></i></button>
-            </div>
-
-            <nav class="nav-links" id="nav-links">
-                <a href="#home">Home</a>
-                <a href="#shop">Shop</a>
-                 <a href="Products.html">Products</a>
-                <a href="category.html">Categories</a>
-                <!-- <a href="#deals" class="highlight">Deals</a> -->
-                <a href="#about">About Us</a>
-                <a href="contact.html">Contact</a>
-                <a href="cart.html">Cart</a>
-                <a href="checkout.html">checkout</a>
-            </nav>
-
-            <div class="header-icons">
-                <a href="#" aria-label="Wishlist"><i class="far fa-heart"></i></a>
-                <a href="#" aria-label="Cart" class="cart-icon">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="badge">0</span>
-                </a>
-                <a href="#" aria-label="Account"><i class="far fa-user"></i></a>
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Big Holiday Sale</h1>
-            <p>Up to 50% Off on Premium Collections. Limited time offer.</p>
-            <div class="cta-buttons">
-                <a href="#shop" class="btn btn-primary">Shop Now</a>
-                <a href="#deals" class="btn btn-secondary">View Deals</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="categories" class="section container">
-        <h2 class="section-title">Shop by Category</h2>
-        <div class="category-grid">
-            <a href="electronics.html" class="category-card">
-                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400&q=80" alt="Electronics">
-                <div class="cat-overlay"><h3>Electronics</h3></div>
-            </a>
-            <a href="fashion.html" class="category-card">
-                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=400&q=80" alt="Fashion">
-                <div class="cat-overlay"><h3>Fashion</h3></div>
-            </a>
-            <a href="homes.html" class="category-card">
-                <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=400&q=80" alt="Home & Kitchen">
-                <div class="cat-overlay"><h3>Home</h3></div>
-            </a>
-            <a href="#" class="category-card">
-                <img src="https://images.unsplash.com/photo-1596462502278-27bfdd403348?auto=format&fit=crop&w=400&q=80" alt="Beauty">
-                <div class="cat-overlay"><h3>Beauty</h3></div>
-            </a>
-        </div>
-    </section>
-
-    <section id="shop" class="section container">
-        <h2 class="section-title">Best Sellers</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80" alt="Headphones">
-                    <button class="wishlist-btn"><i class="far fa-heart"></i></button>
-                </div>
-                <div class="product-info">
-                    <h3>Wireless Headphones</h3>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="price-row">
-                        <span class="price">$129.99</span>
-                        <button class="btn-add" aria-label="Add to cart"><i class="fas fa-plus"></i> Add</button>
-                    </div>
-                </div>
-            </div>
-             <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80" alt="Sneakers">
-                    <button class="wishlist-btn"><i class="far fa-heart"></i></button>
-                </div>
-                <div class="product-info">
-                    <h3>Urban Sneakers</h3>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    </div>
-                    <div class="price-row">
-                        <span class="price">$89.50</span>
-                        <button class="btn-add" aria-label="Add to cart"><i class="fas fa-plus"></i> Add</button>
-                    </div>
-                </div>
-            </div>
-             <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80" alt="Watch">
-                    <button class="wishlist-btn"><i class="far fa-heart"></i></button>
-                </div>
-                <div class="product-info">
-                    <h3>Minimalist Watch</h3>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <div class="price-row">
-                        <span class="price">$149.00</span>
-                        <button class="btn-add" aria-label="Add to cart"><i class="fas fa-plus"></i> Add</button>
-                    </div>
-                </div>
-            </div>
-             <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=400&q=80" alt="Bag">
-                    <button class="wishlist-btn"><i class="far fa-heart"></i></button>
-                </div>
-                <div class="product-info">
-                    <h3>Leather Satchel</h3>
-                    <div class="rating">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    </div>
-                    <div class="price-row">
-                        <span class="price">$79.99</span>
-                        <button class="btn-add" aria-label="Add to cart"><i class="fas fa-plus"></i> Add</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="deals" class="promo-banner">
-        <div class="container promo-content">
-            <div class="promo-text">
-                <h2>Flash Deal: 24 Hours Only!</h2>
-                <p>Get an extra 20% off all clearance items.</p>
-            </div>
-            <a href="#" class="btn btn-promo">Grab Deal</a>
-        </div>
-    </section>
-
-    <section class="section container">
-        <h2 class="section-title">New Arrivals</h2>
-        <div class="product-grid">
-             <div class="product-card group">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1591337676887-a217a6970a8a?auto=format&fit=crop&w=400&q=80" alt="New Item">
-                    <div class="quick-view">
-                        <button>Quick View</button>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3>Crossbody Bag</h3>
-                    <span class="price">$110.00</span>
-                </div>
-            </div>
-             <div class="product-card group">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=400&q=80" alt="New Item">
-                    <div class="quick-view">
-                        <button>Quick View</button>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3>Linen Shirt</h3>
-                    <span class="price">$45.00</span>
-                </div>
-            </div>
-             <div class="product-card group">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1589782182703-2aaa69037b5b?auto=format&fit=crop&w=400&q=80" alt="New Item">
-                    <div class="quick-view">
-                        <button>Quick View</button>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3>Sun Glasses</h3>
-                    <span class="price">$25.00</span>
-                </div>
-            </div>
-             <div class="product-card group">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=400&q=80" alt="New Item">
-                    <div class="quick-view">
-                        <button>Quick View</button>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3>Vintage Clock</h3>
-                    <span class="price">$65.00</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section bg-light">
+<header class="header" role="banner">
+    <div class="header-top">
         <div class="container">
-            <h2 class="section-title">What Our Customers Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <img src="./images/collins.jpg" alt="User">
-                    <p>"The quality of the products is amazing. Fast shipping too!"</p>
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <h4>Sarah Jenkins</h4>
+            <span>Free shipping on orders over $100 | <a href="shop.html">Shop Now</a></span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header-main">
+            <a href="index.html" class="header-logo" aria-label="AvinashMarket Home">Avi<span>nash</span></a>
+            <div class="header-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Search for products, brands, categories..." aria-label="Search products">
+                <button class="search-btn" aria-label="Search">Search</button>
+            </div>
+            <nav class="header-nav" aria-label="Main navigation">
+                <a href="index.html" class="active">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="shop.html?category=electronics">Electronics</a>
+                <a href="shop.html?category=fashion">Fashion</a>
+                <a href="shop.html?category=home">Home</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-icons">
+                <a href="login.html" class="header-icon-btn" aria-label="Account"><i class="far fa-user"></i></a>
+                <a href="wishlist.html" class="header-icon-btn" aria-label="Wishlist">
+                    <i class="far fa-heart"></i>
+                    <span class="badge-count wishlist-badge"></span>
+                </a>
+                <a href="cart.html" class="header-icon-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge-count cart-badge"></span>
+                </a>
+                <button class="mobile-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+            <span class="header-logo" style="font-size:1.25rem;">Avi<span>nash</span></span>
+            <button class="mobile-menu-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-menu-search">
+            <input type="text" placeholder="Search products..." aria-label="Search products">
+        </div>
+        <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="shop.html"><i class="fas fa-store"></i> Shop All</a>
+            <a href="shop.html?category=electronics"><i class="fas fa-bolt"></i> Electronics</a>
+            <a href="shop.html?category=fashion"><i class="fas fa-shirt"></i> Fashion</a>
+            <a href="shop.html?category=home"><i class="fas fa-couch"></i> Home & Living</a>
+            <div class="mobile-menu-divider"></div>
+            <a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a>
+            <a href="cart.html"><i class="fas fa-shopping-bag"></i> Cart</a>
+            <a href="order-tracking.html"><i class="fas fa-truck"></i> Track Order</a>
+            <div class="mobile-menu-divider"></div>
+            <a href="login.html"><i class="far fa-user"></i> Sign In</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+        </nav>
+    </div>
+</div>
+
+<main>
+    <section class="hero" aria-label="Hero banner">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80" alt="Premium shopping experience" loading="eager">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fas fa-fire"></i> Summer Collection 2026</div>
+                <h1>Discover Your <span>Perfect</span> Style</h1>
+                <p>Explore our curated collection of premium electronics, fashion, and home essentials. Quality products, unbeatable prices.</p>
+                <div class="hero-actions">
+                    <a href="shop.html" class="btn btn-accent btn-lg"><i class="fas fa-shopping-bag"></i> Shop Now</a>
+                    <a href="shop.html?category=electronics" class="btn btn-lg" style="background:rgba(255,255,255,0.1);color:white;border:2px solid rgba(255,255,255,0.3);"><i class="fas fa-play-circle"></i> Explore</a>
                 </div>
-                <div class="testimonial-card">
-                    <img src="./images/collins.jpg" alt="User">
-                    <p>"Loved the customer support. They helped me find exactly what I needed."</p>
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <h4>Mike Ross</h4>
+                <div class="hero-stats">
+                    <div class="hero-stat"><span class="stat-value">10K+</span><span class="stat-label">Products</span></div>
+                    <div class="hero-stat"><span class="stat-value">50K+</span><span class="stat-label">Customers</span></div>
+                    <div class="hero-stat"><span class="stat-value">4.8</span><span class="stat-label">Rating</span></div>
                 </div>
-                <div class="testimonial-card">
-                    <img src="./images/collins.jpg" alt="User">
-                    <p>"Great prices for high-end items. Will definitely shop here again."</p>
-                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                    <h4>Emily Clarke</h4>
-                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Featured product - Premium Headphones" loading="eager">
+        </div>
+    </section>
+
+    <section class="section container" aria-label="Product categories">
+        <div class="section-header">
+            <span class="badge-label">Categories</span>
+            <h2>Shop by Category</h2>
+            <p>Browse our wide selection of premium products across multiple categories</p>
+        </div>
+        <div class="grid grid-4" id="categories-grid"></div>
+    </section>
+
+    <section class="section container" aria-label="Best selling products">
+        <div class="section-header">
+            <span class="badge-label">Popular</span>
+            <h2>Best Sellers</h2>
+            <p>Our most loved products, chosen by thousands of happy customers</p>
+        </div>
+        <div class="products-grid" id="bestsellers-grid"></div>
+    </section>
+
+    <div class="container">
+        <div class="promo-banner" id="promo-banner">
+            <div class="promo-content">
+                <h2>Flash Sale: Up to 30% Off</h2>
+                <p>Don't miss out on our biggest deals of the season. Limited stock available.</p>
+                <div class="promo-timer" id="promo-timer"></div>
+                <a href="shop.html" class="btn btn-accent btn-lg"><i class="fas fa-bolt"></i> Shop Deals</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="section container" aria-label="New arrivals">
+        <div class="section-header">
+            <span class="badge-label">Just In</span>
+            <h2>New Arrivals</h2>
+            <p>Check out the latest additions to our collection</p>
+        </div>
+        <div class="products-grid" id="newarrivals-grid"></div>
+    </section>
+
+    <section class="section" aria-label="Customer testimonials" style="background:var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge-label">Testimonials</span>
+                <h2>What Our Customers Say</h2>
+                <p>Real reviews from real customers who love shopping with us</p>
+            </div>
+            <div class="grid grid-3" id="testimonials-grid"></div>
+        </div>
+    </section>
+
+    <section class="section container" aria-label="Trust features">
+        <div class="grid grid-4" style="text-align:center;">
+            <div class="trust-item">
+                <i class="fas fa-truck" style="font-size:2rem;color:var(--primary);margin-bottom:1rem;display:block;"></i>
+                <h4 style="font-weight:700;margin-bottom:0.5rem;">Free Shipping</h4>
+                <p class="text-sm text-muted">On orders over $100</p>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-shield-alt" style="font-size:2rem;color:var(--primary);margin-bottom:1rem;display:block;"></i>
+                <h4 style="font-weight:700;margin-bottom:0.5rem;">Secure Payment</h4>
+                <p class="text-sm text-muted">100% secure checkout</p>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-undo" style="font-size:2rem;color:var(--primary);margin-bottom:1rem;display:block;"></i>
+                <h4 style="font-weight:700;margin-bottom:0.5rem;">Easy Returns</h4>
+                <p class="text-sm text-muted">30-day return policy</p>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-headset" style="font-size:2rem;color:var(--primary);margin-bottom:1rem;display:block;"></i>
+                <h4 style="font-weight:700;margin-bottom:0.5rem;">24/7 Support</h4>
+                <p class="text-sm text-muted">Dedicated help center</p>
             </div>
         </div>
     </section>
 
-    <section class="newsletter-section">
-        <div class="container newsletter-content">
+    <section class="newsletter-section" aria-label="Newsletter subscription">
+        <div class="newsletter-content">
             <h2>Subscribe & Get 10% Off</h2>
-            <p>Join our newsletter to receive exclusive offers and latest news.</p>
+            <p>Join our newsletter for exclusive deals, new arrivals, and insider-only discounts.</p>
             <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email address" required>
+                <input type="email" placeholder="Enter your email address" required aria-label="Email address">
                 <button type="submit">Subscribe</button>
             </form>
         </div>
     </section>
+</main>
 
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h3>LuxeMarket.</h3>
-                <p>Your one-stop shop for premium products.</p>
-                <div class="social-icons">
-                    <a href="https://web.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://x.com/CMunufie17588"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/collins-munufie/"><i class="fab fa-linkedin-in"></i></a>
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="footer-logo">Avi<span>nash</span>Market</div>
+                <p>Your trusted destination for premium products. Quality, style, and value - delivered to your doorstep.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-col">
-                <h3>Quick Links</h3>
+                <h4>Shop</h4>
                 <ul>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="shop.html">All Products</a></li>
+                    <li><a href="shop.html?category=electronics">Electronics</a></li>
+                    <li><a href="shop.html?category=fashion">Fashion</a></li>
+                    <li><a href="shop.html?category=home">Home & Living</a></li>
+                    <li><a href="shop.html?sale=true">Sale Items</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="order-tracking.html">Track Order</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
                     <li><a href="#">FAQs</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>Customer Care</h3>
+                <h4>Company</h4>
                 <ul>
-                    <li><a href="#">Returns Policy</a></li>
-                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms of Service</a></li>
+                    <li><a href="contact.html">Get in Touch</a></li>
                 </ul>
-            </div>
-            <div class="footer-col">
-                <h3>We Accept</h3>
-                <div class="payment-icons">
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                    <i class="fab fa-cc-amex"></i>
-                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2023 AvinashMarket. All Rights Reserved.</p>
+            <p>&copy; 2026 AvinashMarket. All rights reserved.</p>
+            <div class="footer-payments">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+            </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="script.js"></script>
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+<script>
+(function() {
+    function renderProductCard(product) {
+        const stars = renderStars(product.rating);
+        const isWished = App.wishlist.includes(product.id);
+        return `
+            <article class="product-card animate-fade-in">
+                <div class="product-image-wrap">
+                    <a href="product.html?id=${product.id}">
+                        <img src="${product.images[0]}" alt="${product.name}" loading="lazy">
+                    </a>
+                    ${product.badge ? `<div class="product-badges"><span class="badge" style="background:${product.badgeColor};color:white;">${product.badge}</span></div>` : ''}
+                    <div class="product-actions">
+                        <button data-wishlist="${product.id}" class="${isWished ? 'wishlisted' : ''}" aria-label="Add to wishlist">${isWished ? '<i class="fas fa-heart"></i>' : '<i class="far fa-heart"></i>'}</button>
+                        <a href="product.html?id=${product.id}" aria-label="Quick view"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">${product.category}</span>
+                    <h3 class="product-title"><a href="product.html?id=${product.id}">${product.name}</a></h3>
+                    <div class="product-rating">
+                        <div class="stars">${stars}</div>
+                        <span class="count">(${product.reviews.toLocaleString()})</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current">$${product.price.toFixed(2)}</span>
+                        ${product.originalPrice ? `<span class="original">$${product.originalPrice.toFixed(2)}</span>` : ''}
+                        ${product.discount ? `<span class="discount">-${product.discount}%</span>` : ''}
+                    </div>
+                </div>
+                <div class="product-footer">
+                    <button class="add-to-cart-btn" data-add-cart="${product.id}"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </article>`;
+    }
+
+    function renderStars(rating) {
+        let s = '';
+        for (let i = 1; i <= 5; i++) {
+            if (i <= Math.floor(rating)) s += '<i class="fas fa-star"></i>';
+            else if (i - 0.5 <= rating) s += '<i class="fas fa-star-half-alt"></i>';
+            else s += '<i class="far fa-star"></i>';
+        }
+        return s;
+    }
+
+    const catsGrid = document.getElementById('categories-grid');
+    if (catsGrid) {
+        catsGrid.innerHTML = CATEGORIES.filter(c => c.count > 0).map(c => `
+            <a href="shop.html?category=${c.id}" class="category-card-modern">
+                <img src="${c.image}" alt="${c.name}" loading="lazy">
+                <div class="cat-overlay">
+                    <h3>${c.name}</h3>
+                    <p>${c.count} products</p>
+                    <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+            </a>`).join('');
+    }
+
+    const bestGrid = document.getElementById('bestsellers-grid');
+    if (bestGrid) bestGrid.innerHTML = getBestSellers().map(renderProductCard).join('');
+
+    const newArrGrid = document.getElementById('newarrivals-grid');
+    if (newArrGrid) newArrGrid.innerHTML = getNewArrivals().map(renderProductCard).join('');
+
+    const testGrid = document.getElementById('testimonials-grid');
+    if (testGrid) {
+        const testimonials = [
+            { name: "Sarah J.", initials: "SJ", role: "Verified Buyer", rating: 5, text: "The quality of products is outstanding. Fast shipping and excellent customer service. I've become a loyal customer!" },
+            { name: "Michael T.", initials: "MT", role: "Verified Buyer", rating: 5, text: "Best online shopping experience I've had. The product descriptions are accurate and the prices are very competitive." },
+            { name: "Emily R.", initials: "ER", role: "Verified Buyer", rating: 5, text: "Love the curated selection. Everything I've ordered has exceeded my expectations. The packaging is also top-notch." }
+        ];
+        testGrid.innerHTML = testimonials.map(t => `
+            <div class="testimonial-card-modern">
+                <div class="testimonial-rating">${renderStars(t.rating)}</div>
+                <p class="quote">${t.text}</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">${t.initials}</div>
+                    <div class="author-info">
+                        <h4>${t.name}</h4>
+                        <span>${t.role}</span>
+                    </div>
+                </div>
+            </div>`).join('');
+    }
+})();
+</script>
 </body>
 </html>

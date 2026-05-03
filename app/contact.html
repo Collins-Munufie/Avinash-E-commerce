@@ -3,204 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | LuxeMarket</title>
+    <title>Contact Us | AvinashMarket</title>
+    <link rel="icon" type="image/jpeg" href="images/avinash_logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-
-    <header id="header" class="border-bottom sticky-header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">Luxe<span>Market</span>.</a>
-            <div class="search-bar hidden-mobile">
-                <input type="text" placeholder="Search..." aria-label="Search">
-                <button type="button"><i class="fas fa-search"></i></button>
+<header class="header"><div class="header-top"><div class="container"><span>Free shipping on orders over $100 | <a href="shop.html">Shop Now</a></span></div></div><div class="container"><div class="header-main"><a href="index.html" class="header-logo">Avi<span>nash</span></a><nav class="header-nav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="shop.html?category=electronics">Electronics</a><a href="shop.html?category=fashion">Fashion</a><a href="contact.html" class="active">Contact</a></nav><div class="header-icons"><a href="login.html" class="header-icon-btn"><i class="far fa-user"></i></a><a href="wishlist.html" class="header-icon-btn"><i class="far fa-heart"></i><span class="badge-count wishlist-badge"></span></a><a href="cart.html" class="header-icon-btn"><i class="fas fa-shopping-bag"></i><span class="badge-count cart-badge"></span></a><button class="mobile-toggle"><i class="fas fa-bars"></i></button></div></div></div></header>
+<div class="mobile-menu" role="dialog"><div class="mobile-menu-overlay"></div><div class="mobile-menu-content"><div class="mobile-menu-header"><span class="header-logo" style="font-size:1.25rem;">Avi<span>nash</span></span><button class="mobile-menu-close"><i class="fas fa-times"></i></button></div><nav class="mobile-menu-nav"><a href="index.html"><i class="fas fa-home"></i> Home</a><a href="shop.html"><i class="fas fa-store"></i> Shop</a><a href="cart.html"><i class="fas fa-shopping-bag"></i> Cart</a><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></nav></div></div>
+<main>
+    <div class="container">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span class="separator"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i></span><span class="current">Contact Us</span></nav>
+        <div class="section-header"><span class="badge-label">Get in Touch</span><h2>Contact Us</h2><p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p></div>
+        <div class="contact-layout">
+            <div>
+                <form class="checkout-section" onsubmit="handleContact(event)">
+                    <h3>Send us a Message</h3>
+                    <div class="form-row"><div class="form-group"><label>First Name *</label><input type="text" class="input-field" required></div><div class="form-group"><label>Last Name *</label><input type="text" class="input-field" required></div></div>
+                    <div class="form-group"><label>Email *</label><input type="email" class="input-field" required></div>
+                    <div class="form-group"><label>Subject</label><select class="select-field"><option>General Inquiry</option><option>Order Issue</option><option>Product Question</option><option>Returns & Refunds</option><option>Partnership</option></select></div>
+                    <div class="form-group"><label>Message *</label><textarea class="textarea-field" rows="5" required placeholder="Tell us how we can help..."></textarea></div>
+                    <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </form>
             </div>
-            <nav class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="shop.html">Shop</a>
-                <a href="contact.html" class="active-link">Contact</a>
-            </nav>
-            <div class="header-icons">
-                <a href="#"><i class="far fa-heart"></i></a>
-                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i><span class="badge">2</span></a>
-                <a href="#"><i class="far fa-user"></i></a>
+            <div>
+                <div class="contact-info-card">
+                    <h3 style="font-weight:700;margin-bottom:1.5rem;">Contact Information</h3>
+                    <div class="contact-info-item"><div class="icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Address</h4><p>123 Commerce Street, Suite 400<br>New York, NY 10001</p></div></div>
+                    <div class="contact-info-item"><div class="icon"><i class="fas fa-phone"></i></div><div><h4>Phone</h4><p>+1 (555) 123-4567</p></div></div>
+                    <div class="contact-info-item"><div class="icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><p>support@avinashmarket.com</p></div></div>
+                    <div class="contact-info-item"><div class="icon"><i class="fas fa-clock"></i></div><div><h4>Business Hours</h4><p>Mon - Fri: 9AM - 6PM EST<br>Sat: 10AM - 4PM EST</p></div></div>
+                </div>
+                <div style="border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--border-light);">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.5!2d-74.006!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMjEuNiJX!5e0!3m2!1sen!2sus!4v1" width="100%" height="250" style="border:0;" allowfullscreen loading="lazy" title="Store location"></iframe>
+                </div>
             </div>
         </div>
-    </header>
-
-    <section class="contact-hero">
-        <div class="hero-overlay">
-            <h1>We’re Here to Help</h1>
-            <p>Have questions about your order or our products? Reach out to our team.</p>
-        </div>
-    </section>
-
-    <div class="container contact-wrapper">
-        
-        <div class="contact-form-area">
-            <h2 class="section-title">Send a Message</h2>
-            <form id="contactForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Full Name <span class="required">*</span></label>
-                        <input type="text" id="name" placeholder="John Doe" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address <span class="required">*</span></label>
-                        <input type="email" id="email" placeholder="you@example.com" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" placeholder="+1 (555) 000-0000">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject">
-                            <option value="General">General Inquiry</option>
-                            <option value="Order">Order Status</option>
-                            <option value="Product">Product Question</option>
-                            <option value="Returns">Returns & Refunds</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message <span class="required">*</span></label>
-                    <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">Send Message</button>
-                <p id="formMessage" class="form-feedback"></p>
-            </form>
-        </div>
-
-        <aside class="contact-info-area">
-            <div class="info-card">
-                <h3>Contact Information</h3>
-                <ul class="info-list">
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Our Office</strong>
-                            <p>123 Fashion Ave, Suite 400<br>New York, NY 10018</p>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <strong>Phone</strong>
-                            <p>+1 (800) 123-4567</p>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <strong>Email</strong>
-                            <p>support@luxemarket.com</p>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="far fa-clock"></i>
-                        <div>
-                            <strong>Business Hours</strong>
-                            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
-                            <p>Sat - Sun: Closed</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2155458021!2d-73.9878!3d40.7580!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1625000000000!5m2!1sen!2sus" 
-                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
-            </div>
-        </aside>
     </div>
-
-    <section class="container faq-section">
-        <h2 class="section-title text-center">Frequently Asked Questions</h2>
-        <div class="accordion">
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <span>What is your return policy?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="accordion-content">
-                    <p>We accept returns within 30 days of purchase. Items must be unused and in original packaging.</p>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <span>How long does shipping take?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="accordion-content">
-                    <p>Standard shipping takes 3-5 business days. Express shipping (1-2 days) is available at checkout.</p>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <span>Do you ship internationally?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="accordion-content">
-                    <p>Yes, we ship to over 50 countries globally. International shipping rates apply.</p>
-                </div>
-            </div>
+    <div class="container">
+        <section class="faq-section">
+            <div class="section-header"><span class="badge-label">FAQ</span><h2>Frequently Asked Questions</h2></div>
+            <div class="faq-item"><button class="faq-question">How long does shipping take? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Standard shipping takes 3-5 business days. Express shipping (1-2 business days) is available for an additional fee. Orders over $100 qualify for free standard shipping.</div></div></div>
+            <div class="faq-item"><button class="faq-question">What is your return policy? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">We offer a 30-day hassle-free return policy. Items must be in original condition with tags attached. Return shipping is free for orders within the US.</div></div></div>
+            <div class="faq-item"><button class="faq-question">How can I track my order? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Once your order ships, you'll receive a tracking number via email. You can also track your order anytime on our <a href="order-tracking.html" class="text-primary">Order Tracking</a> page.</div></div></div>
+            <div class="faq-item"><button class="faq-question">Do you ship internationally? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes, we ship to over 50 countries worldwide. International shipping rates and delivery times vary by location. Check our shipping page for details.</div></div></div>
+            <div class="faq-item"><button class="faq-question">Are the products authentic? <i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Absolutely. We source all products directly from authorized distributors and manufacturers. Every item comes with a manufacturer warranty.</div></div></div>
         </div>
     </section>
-
-    <section class="newsletter-section">
-        <div class="container">
-            <h2>Join Our Newsletter</h2>
-            <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email address" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-col">
-                <h3>Luxe<span>Market</span>.</h3>
-                <p>Your destination for premium lifestyle products.</p>
-                <div class="socials">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <a href="shop.html">Shop</a>
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-                <a href="#">Returns Policy</a>
-            </div>
-            <div class="footer-col">
-                <h4>Payment Methods</h4>
-                <div class="payment-icons">
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                    <i class="fab fa-cc-amex"></i>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 LuxeMarket. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    </div>
+</main>
+<footer class="footer"><div class="container"><div class="footer-main"><div class="footer-brand"><div class="footer-logo">Avi<span>nash</span>Market</div><p>Your trusted destination for premium products.</p></div><div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Products</a></li><li><a href="shop.html?category=electronics">Electronics</a></li></ul></div><div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="order-tracking.html">Track Order</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="#">Privacy</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 AvinashMarket.</p><div class="footer-payments"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i><i class="fab fa-cc-amex"></i></div></div></div></footer>
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="js/app.js"></script>
+<script>
+function handleContact(e){e.preventDefault();App.showToast('Message sent! We\'ll get back to you soon.');e.target.reset();}
+</script>
 </body>
 </html>

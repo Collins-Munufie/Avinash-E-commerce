@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop all products at AvinashMarket. Browse electronics, fashion, home & living with filters, sorting, and great deals.">
+    <title>Shop All Products | AvinashMarket</title>
+    <link rel="icon" type="image/jpeg" href="images/avinash_logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+<header class="header" role="banner">
+    <div class="header-top">
+        <div class="container"><span>Free shipping on orders over $100 | <a href="shop.html">Shop Now</a></span></div>
+    </div>
+    <div class="container">
+        <div class="header-main">
+            <a href="index.html" class="header-logo" aria-label="Home">Avi<span>nash</span></a>
+            <div class="header-search">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Search for products..." aria-label="Search">
+                <button class="search-btn">Search</button>
+            </div>
+            <nav class="header-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="shop.html?category=electronics">Electronics</a>
+                <a href="shop.html?category=fashion">Fashion</a>
+                <a href="shop.html?category=home">Home</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-icons">
+                <a href="login.html" class="header-icon-btn" aria-label="Account"><i class="far fa-user"></i></a>
+                <a href="wishlist.html" class="header-icon-btn" aria-label="Wishlist"><i class="far fa-heart"></i><span class="badge-count wishlist-badge"></span></a>
+                <a href="cart.html" class="header-icon-btn" aria-label="Cart"><i class="fas fa-shopping-bag"></i><span class="badge-count cart-badge"></span></a>
+                <button class="mobile-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+            <span class="header-logo" style="font-size:1.25rem;">Avi<span>nash</span></span>
+            <button class="mobile-menu-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="shop.html"><i class="fas fa-store"></i> Shop All</a>
+            <a href="shop.html?category=electronics"><i class="fas fa-bolt"></i> Electronics</a>
+            <a href="shop.html?category=fashion"><i class="fas fa-shirt"></i> Fashion</a>
+            <a href="shop.html?category=home"><i class="fas fa-couch"></i> Home & Living</a>
+            <div class="mobile-menu-divider"></div>
+            <a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a>
+            <a href="cart.html"><i class="fas fa-shopping-bag"></i> Cart</a>
+            <div class="mobile-menu-divider"></div>
+            <a href="login.html"><i class="far fa-user"></i> Sign In</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+    </div>
+</div>
+
+<main>
+    <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a><span class="separator"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i></span>
+            <span class="current" id="breadcrumb-current">All Products</span>
+        </nav>
+
+        <div class="page-header" style="border:none;padding:0 0 1rem;">
+            <h1 id="page-title">All Products</h1>
+            <p id="page-desc">Discover our complete collection of premium products</p>
+        </div>
+
+        <button class="mobile-filter-toggle" onclick="document.querySelector('.shop-sidebar').classList.toggle('active')"><i class="fas fa-sliders-h"></i> Filters</button>
+
+        <div class="shop-layout">
+            <aside class="shop-sidebar" aria-label="Product filters">
+                <div class="sidebar-card">
+                    <h3>Categories</h3>
+                    <div class="filter-group" id="category-filters">
+                        <label><input type="checkbox" value="all" checked> All Products <span class="filter-count" id="all-count"></span></label>
+                        <label><input type="checkbox" value="electronics"> Electronics <span class="filter-count" id="elec-count"></span></label>
+                        <label><input type="checkbox" value="fashion"> Fashion <span class="filter-count" id="fash-count"></span></label>
+                        <label><input type="checkbox" value="home"> Home & Living <span class="filter-count" id="home-count"></span></label>
+                    </div>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="number" id="price-min" placeholder="Min" min="0">
+                        <span>-</span>
+                        <input type="number" id="price-max" placeholder="Max" min="0">
+                    </div>
+                    <button class="btn btn-outline btn-sm btn-block" style="margin-top:0.75rem;" onclick="applyFilters()">Apply</button>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Brands</h3>
+                    <div class="filter-group" id="brand-filters"></div>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Rating</h3>
+                    <div class="filter-group" id="rating-filters">
+                        <label><input type="checkbox" value="4"> <span style="color:var(--accent);"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> & up</label>
+                        <label><input type="checkbox" value="3"> <span style="color:var(--accent);"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span> & up</label>
+                    </div>
+                </div>
+                <button class="btn btn-outline btn-block" onclick="resetFilters()"><i class="fas fa-undo"></i> Reset Filters</button>
+            </aside>
+
+            <div>
+                <div class="shop-toolbar">
+                    <span class="results-count">Showing <strong id="result-count">0</strong> products</span>
+                    <div class="toolbar-actions">
+                        <select class="sort-select" id="sort-select" aria-label="Sort products">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                            <option value="newest">Newest</option>
+                            <option value="name">Name A-Z</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="products-grid" id="shop-grid"></div>
+                <div class="pagination" id="pagination"></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="footer-logo">Avi<span>nash</span>Market</div>
+                <p>Your trusted destination for premium products. Quality, style, and value.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Products</a></li><li><a href="shop.html?category=electronics">Electronics</a></li><li><a href="shop.html?category=fashion">Fashion</a></li><li><a href="shop.html?category=home">Home & Living</a></li></ul></div>
+            <div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="order-tracking.html">Track Order</a></li><li><a href="#">Shipping Info</a></li><li><a href="#">Returns</a></li></ul></div>
+            <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 AvinashMarket. All rights reserved.</p><div class="footer-payments"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i><i class="fab fa-cc-amex"></i></div></div>
+    </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+<script>
+(function() {
+    const params = new URLSearchParams(window.location.search);
+    let currentCategory = params.get('category') || 'all';
+    let currentSort = params.get('sort') || 'featured';
+    let currentSearch = params.get('q') || '';
+    let currentPage = 1;
+    const perPage = 12;
+
+    function renderStars(rating) {
+        let s = '';
+        for (let i = 1; i <= 5; i++) { s += i <= Math.floor(rating) ? '<i class="fas fa-star"></i>' : (i - 0.5 <= rating ? '<i class="fas fa-star-half-alt"></i>' : '<i class="far fa-star"></i>'); }
+        return s;
+    }
+
+    function renderProductCard(product) {
+        const isWished = App.wishlist.includes(product.id);
+        return `<article class="product-card animate-fade-in">
+            <div class="product-image-wrap">
+                <a href="product.html?id=${product.id}"><img src="${product.images[0]}" alt="${product.name}" loading="lazy"></a>
+                ${product.badge ? `<div class="product-badges"><span class="badge" style="background:${product.badgeColor};color:white;">${product.badge}</span></div>` : ''}
+                <div class="product-actions">
+                    <button data-wishlist="${product.id}" class="${isWished ? 'wishlisted' : ''}" aria-label="Wishlist">${isWished ? '<i class="fas fa-heart"></i>' : '<i class="far fa-heart"></i>'}</button>
+                    <a href="product.html?id=${product.id}" aria-label="View"><i class="fas fa-eye"></i></a>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="product-category">${product.category}</span>
+                <h3 class="product-title"><a href="product.html?id=${product.id}">${product.name}</a></h3>
+                <div class="product-rating"><div class="stars">${renderStars(product.rating)}</div><span class="count">(${product.reviews.toLocaleString()})</span></div>
+                <div class="product-price">
+                    <span class="current">$${product.price.toFixed(2)}</span>
+                    ${product.originalPrice ? `<span class="original">$${product.originalPrice.toFixed(2)}</span>` : ''}
+                    ${product.discount ? `<span class="discount">-${product.discount}%</span>` : ''}
+                </div>
+            </div>
+            <div class="product-footer"><button class="add-to-cart-btn" data-add-cart="${product.id}"><i class="fas fa-cart-plus"></i> Add to Cart</button></div>
+        </article>`;
+    }
+
+    function getFilteredProducts() {
+        let products = [...PRODUCTS];
+        if (currentCategory !== 'all') products = products.filter(p => p.category === currentCategory);
+        if (currentSearch) { const q = currentSearch.toLowerCase(); products = products.filter(p => p.name.toLowerCase().includes(q) || p.category.toLowerCase().includes(q) || p.brand.toLowerCase().includes(q) || p.description.toLowerCase().includes(q)); }
+        const priceMin = parseFloat(document.getElementById('price-min')?.value) || 0;
+        const priceMax = parseFloat(document.getElementById('price-max')?.value) || Infinity;
+        products = products.filter(p => p.price >= priceMin && p.price <= priceMax);
+        const checkedBrands = [...document.querySelectorAll('#brand-filters input:checked')].map(i => i.value);
+        if (checkedBrands.length > 0) products = products.filter(p => checkedBrands.includes(p.brand));
+        const checkedRatings = [...document.querySelectorAll('#rating-filters input:checked')].map(i => parseFloat(i.value));
+        if (checkedRatings.length > 0) { const minR = Math.min(...checkedRatings); products = products.filter(p => p.rating >= minR); }
+        const checkedCats = [...document.querySelectorAll('#category-filters input:checked')].map(i => i.value);
+        if (!checkedCats.includes('all') && checkedCats.length > 0) products = products.filter(p => checkedCats.includes(p.category));
+        switch(currentSort) {
+            case 'price-low': products.sort((a,b) => a.price - b.price); break;
+            case 'price-high': products.sort((a,b) => b.price - a.price); break;
+            case 'rating': products.sort((a,b) => b.rating - a.rating); break;
+            case 'name': products.sort((a,b) => a.name.localeCompare(b.name)); break;
+        }
+        return products;
+    }
+
+    function renderShop() {
+        const products = getFilteredProducts();
+        const total = products.length;
+        const totalPages = Math.ceil(total / perPage);
+        if (currentPage > totalPages) currentPage = totalPages || 1;
+        const start = (currentPage - 1) * perPage;
+        const pageProducts = products.slice(start, start + perPage);
+        document.getElementById('result-count').textContent = total;
+        document.getElementById('shop-grid').innerHTML = pageProducts.length > 0 ? pageProducts.map(renderProductCard).join('') : '<div class="text-center" style="grid-column:1/-1;padding:4rem;"><i class="fas fa-search" style="font-size:3rem;color:var(--text-muted);margin-bottom:1rem;display:block;"></i><h3>No products found</h3><p class="text-muted">Try adjusting your filters or search terms</p></div>';
+        renderPagination(totalPages);
+        App.initProductCards();
+    }
+
+    function renderPagination(totalPages) {
+        const pag = document.getElementById('pagination');
+        if (totalPages <= 1) { pag.innerHTML = ''; return; }
+        let html = `<button ${currentPage===1?'disabled':''} onclick="goToPage(${currentPage-1})"><i class="fas fa-chevron-left"></i></button>`;
+        for (let i = 1; i <= totalPages; i++) { html += `<button class="${i===currentPage?'active':''}" onclick="goToPage(${i})">${i}</button>`; }
+        html += `<button ${currentPage===totalPages?'disabled':''} onclick="goToPage(${currentPage+1})"><i class="fas fa-chevron-right"></i></button>`;
+        pag.innerHTML = html;
+    }
+
+    window.goToPage = function(p) { currentPage = p; renderShop(); window.scrollTo({top:0,behavior:'smooth'}); };
+    window.applyFilters = function() { currentPage = 1; renderShop(); };
+    window.resetFilters = function() {
+        document.querySelectorAll('.shop-sidebar input').forEach(i => { if(i.type==='checkbox') i.checked = i.value==='all'; else i.value=''; });
+        currentPage = 1; currentCategory = 'all'; currentSearch = ''; renderShop();
+    };
+
+    document.getElementById('sort-select').value = currentSort;
+    document.getElementById('sort-select').addEventListener('change', e => { currentSort = e.target.value; currentPage = 1; renderShop(); });
+    document.querySelectorAll('#category-filters input').forEach(cb => {
+        cb.addEventListener('change', () => {
+            if (cb.value === 'all' && cb.checked) document.querySelectorAll('#category-filters input').forEach(o => { if(o.value!=='all') o.checked=false; });
+            else if (cb.value !== 'all') document.querySelector('#category-filters input[value="all"]').checked = false;
+            currentPage = 1; renderShop();
+        });
+    });
+
+    const brands = [...new Set(PRODUCTS.map(p=>p.brand))];
+    document.getElementById('brand-filters').innerHTML = brands.map(b => `<label><input type="checkbox" value="${b}"> ${b}</label>`).join('');
+    document.querySelectorAll('#brand-filters input, #rating-filters input').forEach(cb => cb.addEventListener('change', () => { currentPage=1; renderShop(); }));
+
+    document.getElementById('all-count').textContent = `(${PRODUCTS.length})`;
+    document.getElementById('elec-count').textContent = `(${getProductsByCategory('electronics').length})`;
+    document.getElementById('fash-count').textContent = `(${getProductsByCategory('fashion').length})`;
+    document.getElementById('home-count').textContent = `(${getProductsByCategory('home').length})`;
+
+    if (currentCategory !== 'all') {
+        document.querySelectorAll('#category-filters input').forEach(cb => cb.checked = cb.value === currentCategory);
+        const catName = CATEGORIES.find(c => c.id === currentCategory)?.name || 'Products';
+        document.getElementById('page-title').textContent = catName;
+        document.getElementById('breadcrumb-current').textContent = catName;
+    }
+    if (currentSearch) {
+        document.getElementById('page-title').textContent = `Search: "${currentSearch}"`;
+        document.getElementById('breadcrumb-current').textContent = `Search: "${currentSearch}"`;
+        const searchInput = document.querySelector('.header-search input');
+        if (searchInput) searchInput.value = currentSearch;
+    }
+
+    renderShop();
+})();
+</script>
+</body>
+</html>

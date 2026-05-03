@@ -3,110 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart | LuxeMarket</title>
+    <title>Shopping Cart | AvinashMarket</title>
+    <link rel="icon" type="image/jpeg" href="images/avinash_logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
 
-    <header id="header" class="border-bottom">
-        <div class="container header-container">
-            <a href="index.html" class="logo">Luxe<span>Market</span>.</a>
+<header class="header" role="banner">
+    <div class="header-top"><div class="container"><span>Free shipping on orders over $100 | <a href="shop.html">Shop Now</a></span></div></div>
+    <div class="container">
+        <div class="header-main">
+            <a href="index.html" class="header-logo">Avi<span>nash</span></a>
+            <div class="header-search"><i class="fas fa-search search-icon"></i><input type="text" placeholder="Search for products..." aria-label="Search"><button class="search-btn">Search</button></div>
+            <nav class="header-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="shop.html?category=electronics">Electronics</a><a href="shop.html?category=fashion">Fashion</a><a href="contact.html">Contact</a>
+            </nav>
             <div class="header-icons">
-                <a href="shop.html" class="text-link">Continue Shopping</a>
-                <a href="#"><i class="fas fa-lock"></i> Secure</a>
+                <a href="login.html" class="header-icon-btn" aria-label="Account"><i class="far fa-user"></i></a>
+                <a href="wishlist.html" class="header-icon-btn" aria-label="Wishlist"><i class="far fa-heart"></i><span class="badge-count wishlist-badge"></span></a>
+                <a href="cart.html" class="header-icon-btn" aria-label="Cart"><i class="fas fa-shopping-bag"></i><span class="badge-count cart-badge"></span></a>
+                <button class="mobile-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <section class="container cart-section">
-        <h1 class="page-title">Shopping Cart (2)</h1>
+<div class="mobile-menu" role="dialog"><div class="mobile-menu-overlay"></div><div class="mobile-menu-content"><div class="mobile-menu-header"><span class="header-logo" style="font-size:1.25rem;">Avi<span>nash</span></span><button class="mobile-menu-close" aria-label="Close"><i class="fas fa-times"></i></button></div><nav class="mobile-menu-nav"><a href="index.html"><i class="fas fa-home"></i> Home</a><a href="shop.html"><i class="fas fa-store"></i> Shop</a><a href="cart.html"><i class="fas fa-shopping-bag"></i> Cart</a><a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a><div class="mobile-menu-divider"></div><a href="login.html"><i class="far fa-user"></i> Sign In</a></nav></div></div>
 
-        <div class="cart-layout">
-            <div class="cart-items-container">
-                <div class="cart-header">
-                    <span>Product</span>
-                    <span>Quantity</span>
-                    <span>Total</span>
-                </div>
+<main>
+    <div class="container">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span class="separator"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i></span><span class="current">Shopping Cart</span></nav>
+        <h1 style="font-size:var(--text-3xl);font-weight:800;margin-bottom:0.5rem;">Shopping Cart</h1>
+        <p class="text-muted" style="margin-bottom:2rem;" id="cart-count-text"></p>
+        <div id="cart-content"></div>
+    </div>
+</main>
 
-                <div class="cart-item" id="item-1">
-                    <div class="item-info">
-                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=150&q=80" alt="Headphones">
-                        <div>
-                            <h4>Wireless Headphones</h4>
-                            <p class="text-muted">Color: Black</p>
-                            <button class="remove-btn" onclick="removeItem('item-1')"><i class="fas fa-trash"></i> Remove</button>
-                        </div>
+<footer class="footer"><div class="container"><div class="footer-main"><div class="footer-brand"><div class="footer-logo">Avi<span>nash</span>Market</div><p>Your trusted destination for premium products.</p></div><div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Products</a></li><li><a href="shop.html?category=electronics">Electronics</a></li><li><a href="shop.html?category=fashion">Fashion</a></li></ul></div><div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="order-tracking.html">Track Order</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="#">Privacy</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 AvinashMarket.</p><div class="footer-payments"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i><i class="fab fa-cc-amex"></i></div></div></div></footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+<script>
+(function() {
+    function renderCart() {
+        const container = document.getElementById('cart-content');
+        if (App.cart.length === 0) {
+            container.innerHTML = `<div class="cart-empty"><i class="fas fa-shopping-bag"></i><h3>Your cart is empty</h3><p>Looks like you haven't added anything to your cart yet.</p><a href="shop.html" class="btn btn-primary btn-lg"><i class="fas fa-store"></i> Continue Shopping</a></div>`;
+            document.getElementById('cart-count-text').textContent = '0 items';
+            return;
+        }
+        document.getElementById('cart-count-text').textContent = `${App.cart.reduce((s,i)=>s+i.qty,0)} items in your cart`;
+        let subtotal = 0;
+        let itemsHtml = App.cart.map(item => {
+            const p = getProductById(item.id);
+            if (!p) return '';
+            const lineTotal = p.price * item.qty;
+            subtotal += lineTotal;
+            return `<div class="cart-item" data-cart-item="${item.id}">
+                <div class="cart-item-image"><a href="product.html?id=${p.id}"><img src="${p.images[0]}" alt="${p.name}"></a></div>
+                <div class="cart-item-info">
+                    <h3><a href="product.html?id=${p.id}">${p.name}</a></h3>
+                    <p class="item-variant">Brand: ${p.brand}</p>
+                    <div class="qty-selector" style="margin-top:0.5rem;">
+                        <button onclick="App.updateCartQty(${item.id},-1);renderCart();" aria-label="Decrease"><i class="fas fa-minus"></i></button>
+                        <input type="number" value="${item.qty}" min="1" max="${p.stock}" readonly>
+                        <button onclick="App.updateCartQty(${item.id},1);renderCart();" aria-label="Increase"><i class="fas fa-plus"></i></button>
                     </div>
-                    <div class="item-qty">
-                        <div class="quantity-selector">
-                            <button onclick="updateCartQty('price-1', -1)">-</button>
-                            <input type="number" value="1" readonly>
-                            <button onclick="updateCartQty('price-1', 1)">+</button>
-                        </div>
+                </div>
+                <div class="cart-item-actions">
+                    <span class="item-price">$${lineTotal.toFixed(2)}</span>
+                    <button class="cart-item-remove" onclick="App.removeFromCart(${item.id});renderCart();"><i class="fas fa-trash-alt"></i> Remove</button>
+                </div>
+            </div>`;
+        }).join('');
+        const shipping = subtotal >= 100 ? 0 : 9.99;
+        const tax = subtotal * 0.05;
+        const total = subtotal + shipping + tax;
+        container.innerHTML = `
+            <div class="cart-layout">
+                <div class="cart-items">${itemsHtml}</div>
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row"><span class="label">Subtotal</span><span class="value" id="cart-subtotal">$${subtotal.toFixed(2)}</span></div>
+                    <div class="summary-row"><span class="label">Shipping</span><span class="value" style="color:${shipping===0?'var(--success)':'inherit'}">${shipping===0?'FREE':'$'+shipping.toFixed(2)}</span></div>
+                    <div class="summary-row"><span class="label">Tax (5%)</span><span class="value" id="cart-tax">$${tax.toFixed(2)}</span></div>
+                    ${shipping>0?`<p class="text-xs text-muted" style="margin-top:0.5rem;">Add $${(100-subtotal).toFixed(2)} more for free shipping</p>`:''}
+                    <div class="summary-row total"><span>Total</span><span id="cart-total">$${total.toFixed(2)}</span></div>
+                    <form class="coupon-form" onsubmit="return false;">
+                        <input type="text" placeholder="Coupon code" aria-label="Coupon code">
+                        <button class="btn btn-outline btn-sm" onclick="App.showToast('Coupon applied!','success')">Apply</button>
+                    </form>
+                    <a href="checkout.html" class="btn btn-primary btn-lg btn-block"><i class="fas fa-lock"></i> Proceed to Checkout</a>
+                    <a href="shop.html" class="btn btn-ghost btn-block" style="margin-top:0.5rem;"><i class="fas fa-arrow-left"></i> Continue Shopping</a>
+                    <div class="text-center" style="margin-top:1.5rem;display:flex;justify-content:center;gap:1rem;font-size:1.5rem;color:var(--text-muted);">
+                        <i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i><i class="fab fa-cc-amex"></i>
                     </div>
-                    <div class="item-price" id="price-1" data-base-price="249.00">$249.00</div>
                 </div>
-
-                <div class="cart-item" id="item-2">
-                    <div class="item-info">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=150&q=80" alt="Watch">
-                        <div>
-                            <h4>Smart Watch</h4>
-                            <p class="text-muted">Color: Silver</p>
-                            <button class="remove-btn" onclick="removeItem('item-2')"><i class="fas fa-trash"></i> Remove</button>
-                        </div>
-                    </div>
-                    <div class="item-qty">
-                        <div class="quantity-selector">
-                            <button onclick="updateCartQty('price-2', -1)">-</button>
-                            <input type="number" value="1" readonly>
-                            <button onclick="updateCartQty('price-2', 1)">+</button>
-                        </div>
-                    </div>
-                    <div class="item-price" id="price-2" data-base-price="199.00">$199.00</div>
-                </div>
-            </div>
-
-            <div class="order-summary">
-                <h3>Order Summary</h3>
-                <div class="summary-row">
-                    <span>Subtotal</span>
-                    <span id="cart-subtotal">$448.00</span>
-                </div>
-                <div class="summary-row">
-                    <span>Shipping</span>
-                    <span>Free</span>
-                </div>
-                <div class="summary-row">
-                    <span>Tax (5%)</span>
-                    <span id="cart-tax">$22.40</span>
-                </div>
-                
-                <div class="coupon-box">
-                    <input type="text" placeholder="Discount Code">
-                    <button>Apply</button>
-                </div>
-
-                <div class="summary-total">
-                    <span>Total</span>
-                    <span id="cart-total">$470.40</span>
-                </div>
-
-                <a href="checkout.html" class="btn btn-primary btn-block">Proceed to Checkout</a>
-                
-                <div class="trust-icons">
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                    <p><i class="fas fa-shield-alt"></i> Secure Checkout</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+            </div>`;
+    }
+    renderCart();
+})();
+</script>
 </body>
 </html>

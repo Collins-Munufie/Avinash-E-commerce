@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" id="meta-desc" content="Product details at AvinashMarket">
+    <title id="meta-title">Product Details | AvinashMarket</title>
+    <link rel="icon" type="image/jpeg" href="images/avinash_logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+<header class="header" role="banner">
+    <div class="header-top"><div class="container"><span>Free shipping on orders over $100 | <a href="shop.html">Shop Now</a></span></div></div>
+    <div class="container">
+        <div class="header-main">
+            <a href="index.html" class="header-logo">Avi<span>nash</span></a>
+            <div class="header-search"><i class="fas fa-search search-icon"></i><input type="text" placeholder="Search for products..." aria-label="Search"><button class="search-btn">Search</button></div>
+            <nav class="header-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a><a href="shop.html">Shop</a><a href="shop.html?category=electronics">Electronics</a><a href="shop.html?category=fashion">Fashion</a><a href="shop.html?category=home">Home</a><a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-icons">
+                <a href="login.html" class="header-icon-btn" aria-label="Account"><i class="far fa-user"></i></a>
+                <a href="wishlist.html" class="header-icon-btn" aria-label="Wishlist"><i class="far fa-heart"></i><span class="badge-count wishlist-badge"></span></a>
+                <a href="cart.html" class="header-icon-btn" aria-label="Cart"><i class="fas fa-shopping-bag"></i><span class="badge-count cart-badge"></span></a>
+                <button class="mobile-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-content">
+        <div class="mobile-menu-header"><span class="header-logo" style="font-size:1.25rem;">Avi<span>nash</span></span><button class="mobile-menu-close" aria-label="Close menu"><i class="fas fa-times"></i></button></div>
+        <nav class="mobile-menu-nav">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a><a href="shop.html"><i class="fas fa-store"></i> Shop All</a><a href="cart.html"><i class="fas fa-shopping-bag"></i> Cart</a><a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a><div class="mobile-menu-divider"></div><a href="login.html"><i class="far fa-user"></i> Sign In</a><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+    </div>
+</div>
+
+<main>
+    <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a><span class="separator"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i></span>
+            <a href="shop.html" id="bc-category">Shop</a><span class="separator"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i></span>
+            <span class="current" id="bc-product">Product</span>
+        </nav>
+
+        <div id="product-detail"></div>
+
+        <div class="tabs" role="tablist">
+            <button class="tab-btn active" role="tab" data-tab="desc" aria-selected="true">Description</button>
+            <button class="tab-btn" role="tab" data-tab="specs">Specifications</button>
+            <button class="tab-btn" role="tab" data-tab="reviews">Reviews</button>
+            <button class="tab-btn" role="tab" data-tab="shipping">Shipping</button>
+        </div>
+        <div id="tab-desc" class="tab-content active" role="tabpanel"></div>
+        <div id="tab-specs" class="tab-content" role="tabpanel"></div>
+        <div id="tab-reviews" class="tab-content" role="tabpanel"></div>
+        <div id="tab-shipping" class="tab-content" role="tabpanel"></div>
+
+        <section class="related-products" aria-label="Related products">
+            <div class="section-header" style="margin-bottom:2rem;"><h2 style="font-size:var(--text-2xl);">You May Also Like</h2></div>
+            <div class="products-grid" id="related-grid"></div>
+        </section>
+    </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-main">
+            <div class="footer-brand"><div class="footer-logo">Avi<span>nash</span>Market</div><p>Your trusted destination for premium products.</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+            <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Products</a></li><li><a href="shop.html?category=electronics">Electronics</a></li><li><a href="shop.html?category=fashion">Fashion</a></li></ul></div>
+            <div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="order-tracking.html">Track Order</a></li><li><a href="#">Returns</a></li></ul></div>
+            <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 AvinashMarket. All rights reserved.</p><div class="footer-payments"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i><i class="fab fa-cc-amex"></i></div></div>
+    </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+<script>
+(function() {
+    const params = new URLSearchParams(window.location.search);
+    const productId = parseInt(params.get('id'));
+    const product = getProductById(productId);
+    if (!product) { document.getElementById('product-detail').innerHTML = '<div class="text-center" style="padding:4rem;"><h2>Product not found</h2><a href="shop.html" class="btn btn-primary" style="margin-top:1rem;">Back to Shop</a></div>'; return; }
+
+    document.getElementById('meta-title').textContent = `${product.name} | AvinashMarket`;
+    document.getElementById('meta-desc').content = product.description;
+    document.getElementById('bc-category').textContent = product.category.charAt(0).toUpperCase() + product.category.slice(1);
+    document.getElementById('bc-category').href = `shop.html?category=${product.category}`;
+    document.getElementById('bc-product').textContent = product.name;
+
+    const isWished = App.wishlist.includes(product.id);
+    const stars = Array.from({length:5}, (_,i) => i < Math.floor(product.rating) ? '<i class="fas fa-star"></i>' : (i + 0.5 <= product.rating ? '<i class="fas fa-star-half-alt"></i>' : '<i class="far fa-star"></i>')).join('');
+
+    document.getElementById('product-detail').innerHTML = `
+        <div class="detail-layout">
+            <div class="gallery">
+                <div class="gallery-main" id="zoom-container">
+                    <img src="${product.images[0]}" alt="${product.name}" id="main-img">
+                    <span class="zoom-hint"><i class="fas fa-search-plus"></i> Hover to zoom</span>
+                </div>
+                <div class="gallery-thumbs">${product.images.map((img,i) => `<div class="gallery-thumb ${i===0?'active':''}" onclick="changeImg('${img}',this)"><img src="${img}" alt="Thumbnail ${i+1}"></div>`).join('')}</div>
+            </div>
+            <div class="detail-info">
+                <div class="detail-badges">
+                    ${product.badge ? `<span class="badge" style="background:${product.badgeColor};color:white;">${product.badge}</span>` : ''}
+                    ${product.discount ? `<span class="badge badge-danger">-${product.discount}% OFF</span>` : ''}
+                </div>
+                <h1>${product.name}</h1>
+                <div class="detail-meta">
+                    <div class="detail-rating"><div class="stars">${stars}</div><span class="text">${product.rating}</span><span class="text-muted">(${product.reviews.toLocaleString()} reviews)</span></div>
+                    <span class="detail-sku">SKU: ${product.sku}</span>
+                    <span class="detail-stock ${product.inStock ? 'in-stock' : 'out-of-stock'}"><i class="fas fa-circle" style="font-size:0.5rem;"></i> ${product.inStock ? `In Stock (${product.stock} left)` : 'Out of Stock'}</span>
+                </div>
+                <div class="detail-price-box">
+                    <div class="price-row">
+                        <span class="current-price">$${product.price.toFixed(2)}</span>
+                        ${product.originalPrice ? `<span class="original-price">$${product.originalPrice.toFixed(2)}</span>` : ''}
+                        ${product.discount ? `<span class="save-badge">Save $${(product.originalPrice - product.price).toFixed(2)}</span>` : ''}
+                    </div>
+                </div>
+                <p class="detail-desc">${product.description}</p>
+                <div class="detail-options">
+                    <span class="option-label">Color: <span id="color-name">${product.colors.length > 0 ? 'Option 1' : ''}</span></span>
+                    <div class="color-options">${product.colors.map((c,i) => `<button class="color-option ${i===0?'active':''}" style="background:${c};" onclick="selectColor(this,'${c}')" aria-label="Color option"></button>`).join('')}</div>
+                </div>
+                <div class="detail-options">
+                    <span class="option-label">Quantity</span>
+                    <div class="qty-selector">
+                        <button onclick="changeQty(-1)" aria-label="Decrease quantity"><i class="fas fa-minus"></i></button>
+                        <input type="number" id="qty-input" value="1" min="1" max="${product.stock}" aria-label="Quantity">
+                        <button onclick="changeQty(1)" aria-label="Increase quantity"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="detail-actions">
+                    <button class="btn btn-primary btn-lg" data-add-cart="${product.id}" ${!product.inStock?'disabled':''}><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    <button class="btn btn-outline btn-lg btn-icon" data-wishlist="${product.id}" class="${isWished?'wishlisted':''}" aria-label="Wishlist">${isWished ? '<i class="fas fa-heart"></i>' : '<i class="far fa-heart"></i>'}</button>
+                </div>
+                <div class="detail-features"><ul>${product.features.map(f => `<li><i class="fas fa-check-circle"></i>${f}</li>`).join('')}</ul></div>
+                <div class="detail-trust">
+                    <div class="trust-item"><i class="fas fa-truck"></i><span>Free Shipping</span></div>
+                    <div class="trust-item"><i class="fas fa-undo"></i><span>30-Day Returns</span></div>
+                    <div class="trust-item"><i class="fas fa-shield-alt"></i><span>2-Year Warranty</span></div>
+                </div>
+            </div>
+        </div>`;
+
+    const reviews = getProductReviews(product.id);
+    const avgRating = reviews.length > 0 ? (reviews.reduce((s,r) => s + r.rating, 0) / reviews.length).toFixed(1) : product.rating;
+    document.getElementById('tab-desc').innerHTML = `<div style="padding:1rem 0;"><p style="line-height:1.8;color:var(--text-secondary);">${product.description}</p><h3 style="margin:1.5rem 0 1rem;font-weight:700;">Key Features</h3><ul style="display:grid;gap:0.5rem;">${product.features.map(f => `<li style="display:flex;align-items:flex-start;gap:0.5rem;color:var(--text-secondary);"><i class="fas fa-check-circle" style="color:var(--success);margin-top:3px;"></i>${f}</li>`).join('')}</ul></div>`;
+    document.getElementById('tab-specs').innerHTML = `<div style="padding:1rem 0;"><table style="width:100%;border-collapse:collapse;">${Object.entries(product.specs).map(([k,v],i) => `<tr style="${i%2?'background:var(--bg-secondary)':''}"><td style="padding:0.75rem 1rem;font-weight:600;border-bottom:1px solid var(--border-light);width:40%;">${k}</td><td style="padding:0.75rem 1rem;border-bottom:1px solid var(--border-light);color:var(--text-secondary);">${v}</td></tr>`).join('')}</table></div>`;
+    document.getElementById('tab-reviews').innerHTML = `
+        <div class="reviews-section">
+            <div class="reviews-summary">
+                <div class="overall-rating"><div class="big-rating">${avgRating}</div><div class="stars">${stars}</div><div class="total">${reviews.length} reviews</div></div>
+                <div class="rating-bars">${[5,4,3,2,1].map(n => { const count = reviews.filter(r=>r.rating===n).length; const pct = reviews.length ? (count/reviews.length*100) : 0; return `<div class="rating-bar-row"><span class="label">${n} star</span><div class="bar"><div class="fill" style="width:${pct}%"></div></div><span class="count">${count}</span></div>`; }).join('')}</div>
+            </div>
+            ${reviews.length > 0 ? reviews.map(r => `
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-avatar">${r.avatar}</div>
+                        <div class="review-meta"><h4>${r.author}</h4><span>${r.date}</span></div>
+                        ${r.verified ? '<span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>' : ''}
+                    </div>
+                    <div class="review-stars">${Array.from({length:5},(_,i)=>i<r.rating?'<i class="fas fa-star"></i>':'<i class="far fa-star"></i>').join('')}</div>
+                    <div class="review-title">${r.title}</div>
+                    <p class="review-text">${r.text}</p>
+                    <div class="review-helpful"><span>${r.helpful} found this helpful</span><button><i class="far fa-thumbs-up"></i> Helpful</button></div>
+                </div>`).join('') : '<p class="text-muted" style="padding:2rem 0;text-align:center;">No reviews yet. Be the first to review this product!</p>'}
+        </div>`;
+    document.getElementById('tab-shipping').innerHTML = `<div style="padding:1rem 0;"><div style="background:var(--bg-secondary);border-radius:var(--radius-lg);padding:1.5rem;"><p style="line-height:1.8;color:var(--text-secondary);">${product.shipping}</p><ul style="margin-top:1rem;display:grid;gap:0.5rem;"><li style="display:flex;align-items:center;gap:0.5rem;color:var(--text-secondary);"><i class="fas fa-truck" style="color:var(--primary);"></i> Standard Shipping: 3-5 business days</li><li style="display:flex;align-items:center;gap:0.5rem;color:var(--text-secondary);"><i class="fas fa-bolt" style="color:var(--primary);"></i> Express Shipping: 1-2 business days (+$9.99)</li><li style="display:flex;align-items:center;gap:0.5rem;color:var(--text-secondary);"><i class="fas fa-undo" style="color:var(--primary);"></i> Free returns within 30 days</li></ul></div></div>`;
+
+    const related = getRelatedProducts(product.relatedIds);
+    document.getElementById('related-grid').innerHTML = related.map(p => {
+        const ws = App.wishlist.includes(p.id);
+        return `<article class="product-card"><div class="product-image-wrap"><a href="product.html?id=${p.id}"><img src="${p.images[0]}" alt="${p.name}" loading="lazy"></a>${p.badge?`<div class="product-badges"><span class="badge" style="background:${p.badgeColor};color:white;">${p.badge}</span></div>`:''}<div class="product-actions"><button data-wishlist="${p.id}" class="${ws?'wishlisted':''}" aria-label="Wishlist">${ws?'<i class="fas fa-heart"></i>':'<i class="far fa-heart"></i>'}</button></div></div><div class="product-info"><span class="product-category">${p.category}</span><h3 class="product-title"><a href="product.html?id=${p.id}">${p.name}</a></h3><div class="product-price"><span class="current">$${p.price.toFixed(2)}</span>${p.originalPrice?`<span class="original">$${p.originalPrice.toFixed(2)}</span>`:''}</div></div><div class="product-footer"><button class="add-to-cart-btn" data-add-cart="${p.id}"><i class="fas fa-cart-plus"></i> Add to Cart</button></div></article>`;
+    }).join('');
+
+    App.initProductCards();
+
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected','true');
+        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    }));
+
+    window.changeImg = function(src, el) { document.getElementById('main-img').src = src; document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active')); el.classList.add('active'); };
+    window.changeQty = function(d) { const inp = document.getElementById('qty-input'); let v = parseInt(inp.value) + d; if(v<1) v=1; if(v>parseInt(inp.max)) v=parseInt(inp.max); inp.value=v; };
+    window.selectColor = function(el, c) { document.querySelectorAll('.color-option').forEach(b => b.classList.remove('active')); el.classList.add('active'); document.getElementById('color-name').textContent = c; };
+
+    const zoomC = document.getElementById('zoom-container');
+    const mainImg = document.getElementById('main-img');
+    if (zoomC && mainImg) {
+        zoomC.addEventListener('mousemove', e => {
+            const {left,top,width,height} = zoomC.getBoundingClientRect();
+            const xP = ((e.clientX-left)/width)*100;
+            const yP = ((e.clientY-top)/height)*100;
+            mainImg.style.transformOrigin = `${xP}% ${yP}%`;
+            mainImg.style.transform = 'scale(1.8)';
+        });
+        zoomC.addEventListener('mouseleave', () => { mainImg.style.transform='scale(1)'; mainImg.style.transformOrigin='center center'; });
+    }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order | AvinashMarket</title>
+    <link rel="icon" type="image/jpeg" href="images/avinash_logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<header class="header"><div class="header-top"><div class="container"><span>Free shipping on orders over $100 | <a href="shop.html">Shop Now</a></span></div></div><div class="container"><div class="header-main"><a href="index.html" class="header-logo">Avi<span>nash</span></a><nav class="header-nav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="cart.html">Cart</a><a href="contact.html">Contact</a></nav><div class="header-icons"><a href="login.html" class="header-icon-btn"><i class="far fa-user"></i></a><a href="wishlist.html" class="header-icon-btn"><i class="far fa-heart"></i><span class="badge-count wishlist-badge"></span></a><a href="cart.html" class="header-icon-btn"><i class="fas fa-shopping-bag"></i><span class="badge-count cart-badge"></span></a><button class="mobile-toggle"><i class="fas fa-bars"></i></button></div></div></div></header>
+<div class="mobile-menu" role="dialog"><div class="mobile-menu-overlay"></div><div class="mobile-menu-content"><div class="mobile-menu-header"><span class="header-logo" style="font-size:1.25rem;">Avi<span>nash</span></span><button class="mobile-menu-close"><i class="fas fa-times"></i></button></div><nav class="mobile-menu-nav"><a href="index.html"><i class="fas fa-home"></i> Home</a><a href="shop.html"><i class="fas fa-store"></i> Shop</a><a href="cart.html"><i class="fas fa-shopping-bag"></i> Cart</a><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></nav></div></div>
+<main>
+    <div class="container">
+        <nav class="breadcrumb"><a href="index.html">Home</a><span class="separator"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i></span><span class="current">Track Order</span></nav>
+        <div class="section-header"><span class="badge-label">Track</span><h2>Track Your Order</h2><p>Enter your order number to get real-time updates</p></div>
+        <div style="max-width:500px;margin:0 auto 3rem;">
+            <form onsubmit="trackOrder(event)" class="flex gap-3">
+                <input type="text" class="input-field" placeholder="Order # (e.g., AM-2026-001)" id="order-input" value="AM-2026-001" style="flex:1;">
+                <button type="submit" class="btn btn-primary">Track</button>
+            </form>
+        </div>
+        <div id="tracking-result"></div>
+    </div>
+</main>
+<footer class="footer"><div class="container"><div class="footer-main"><div class="footer-brand"><div class="footer-logo">Avi<span>nash</span>Market</div><p>Your trusted destination for premium products.</p></div><div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Products</a></li><li><a href="shop.html?category=electronics">Electronics</a></li></ul></div><div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="#">Returns</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="#">Privacy</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 AvinashMarket.</p><div class="footer-payments"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i><i class="fab fa-cc-amex"></i></div></div></div></footer>
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="js/app.js"></script>
+<script>
+function trackOrder(e){e.preventDefault();const r=document.getElementById('tracking-result');r.innerHTML=`<div class="order-tracking"><div class="order-header-card"><div class="flex justify-between items-center flex-wrap gap-4"><div><h3 style="font-weight:700;">Order #AM-2026-001</h3><p class="text-sm text-muted">Placed on May 1, 2026</p></div><span class="badge badge-primary">In Transit</span></div><div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);"><div class="summary-row"><span class="label">Items</span><span class="value">3 products</span></div><div class="summary-row"><span class="label">Total</span><span class="value">$489.97</span></div><div class="summary-row"><span class="label">Shipping to</span><span class="value">John Doe, New York, NY</span></div><div class="summary-row"><span class="label">Estimated Delivery</span><span class="value text-primary font-bold">May 5, 2026</span></div></div></div><div class="order-progress"><div class="progress-fill" style="width:50%;"></div><div class="progress-step completed"><div class="step-icon"><i class="fas fa-check"></i></div><span class="step-label">Confirmed</span><span class="text-xs text-muted" style="display:block;">May 1</span></div><div class="progress-step completed"><div class="step-icon"><i class="fas fa-check"></i></div><span class="step-label">Processing</span><span class="text-xs text-muted" style="display:block;">May 2</span></div><div class="progress-step current"><div class="step-icon"><i class="fas fa-truck"></i></div><span class="step-label">In Transit</span><span class="text-xs text-muted" style="display:block;">May 3</span></div><div class="progress-step"><div class="step-icon"><i class="fas fa-home"></i></div><span class="step-label">Delivered</span><span class="text-xs text-muted" style="display:block;">May 5</span></div></div><div class="checkout-section" style="margin-top:2rem;"><h3>Shipping Updates</h3><div style="border-left:2px solid var(--border-light);padding-left:1.5rem;"><div style="position:relative;padding-bottom:1.5rem;"><div style="position:absolute;left:-1.85rem;top:0;width:12px;height:12px;border-radius:50%;background:var(--success);border:2px solid white;"></div><p class="text-sm font-semibold">Package in transit</p><p class="text-xs text-muted">May 3, 2026 - 10:30 AM | Distribution Center, Newark NJ</p></div><div style="position:relative;padding-bottom:1.5rem;"><div style="position:absolute;left:-1.85rem;top:0;width:12px;height:12px;border-radius:50%;background:var(--success);border:2px solid white;"></div><p class="text-sm font-semibold">Shipped from warehouse</p><p class="text-xs text-muted">May 2, 2026 - 3:00 PM | AvinashMarket Warehouse</p></div><div style="position:relative;padding-bottom:1.5rem;"><div style="position:absolute;left:-1.85rem;top:0;width:12px;height:12px;border-radius:50%;background:var(--success);border:2px solid white;"></div><p class="text-sm font-semibold">Order confirmed</p><p class="text-xs text-muted">May 1, 2026 - 9:15 AM</p></div></div></div></div>`;}
+document.addEventListener('DOMContentLoaded', trackOrder);
+</script>
+</body>
+</html>
